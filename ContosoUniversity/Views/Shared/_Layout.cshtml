@@ -17,8 +17,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Contoso University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Home", "Index", "Home", new { @class = "navbar-brand" })
-                @Html.ActionLink("About", "About", "Home", new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.Partial("_NavBar")
             </div>
         </div>
