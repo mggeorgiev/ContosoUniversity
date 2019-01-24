@@ -187,6 +187,15 @@
     </Compile>
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\201901241402307_InitialCreate.cs" />
+    <Compile Include="Migrations\201901241402307_InitialCreate.Designer.cs">
+      <DependentUpon>201901241402307_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241425450_PopulateTestData.cs" />
+    <Compile Include="Migrations\201901241425450_PopulateTestData.Designer.cs">
+      <DependentUpon>201901241425450_PopulateTestData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
@@ -209,6 +218,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\ContosoUniversity20190124054709 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\mgdemo-cu - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\mgdemo-cu - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -276,6 +288,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901241402307_InitialCreate.resx">
+      <DependentUpon>201901241402307_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241425450_PopulateTestData.resx">
+      <DependentUpon>201901241425450_PopulateTestData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
