@@ -189,41 +189,9 @@
     </Compile>
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
-    <Compile Include="Migrations\201901241402307_InitialCreate.cs" />
-    <Compile Include="Migrations\201901241402307_InitialCreate.Designer.cs">
-      <DependentUpon>201901241402307_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901241425450_PopulateTestData.cs" />
-    <Compile Include="Migrations\201901241425450_PopulateTestData.Designer.cs">
-      <DependentUpon>201901241425450_PopulateTestData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901241618075_MaxLengthOnNames.cs" />
-    <Compile Include="Migrations\201901241618075_MaxLengthOnNames.Designer.cs">
-      <DependentUpon>201901241618075_MaxLengthOnNames.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901242017318_UpdateStudent.cs" />
-    <Compile Include="Migrations\201901242017318_UpdateStudent.Designer.cs">
-      <DependentUpon>201901242017318_UpdateStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901250954010_CreateInstructor.cs" />
-    <Compile Include="Migrations\201901250954010_CreateInstructor.Designer.cs">
-      <DependentUpon>201901250954010_CreateInstructor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901250959453_CreateOfficeAssignment.cs" />
-    <Compile Include="Migrations\201901250959453_CreateOfficeAssignment.Designer.cs">
-      <DependentUpon>201901250959453_CreateOfficeAssignment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901251025295_CreateDepartment.cs" />
-    <Compile Include="Migrations\201901251025295_CreateDepartment.Designer.cs">
-      <DependentUpon>201901251025295_CreateDepartment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901251027135_CreateRepationships.cs" />
-    <Compile Include="Migrations\201901251027135_CreateRepationships.Designer.cs">
-      <DependentUpon>201901251027135_CreateRepationships.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901251720066_RenameColumns.cs" />
-    <Compile Include="Migrations\201901251720066_RenameColumns.Designer.cs">
-      <DependentUpon>201901251720066_RenameColumns.cs</DependentUpon>
+    <Compile Include="Migrations\201901281906128_InitialMigration.cs" />
+    <Compile Include="Migrations\201901281906128_InitialMigration.Designer.cs">
+      <DependentUpon>201901281906128_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -332,32 +300,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901241402307_InitialCreate.resx">
-      <DependentUpon>201901241402307_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901241425450_PopulateTestData.resx">
-      <DependentUpon>201901241425450_PopulateTestData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901241618075_MaxLengthOnNames.resx">
-      <DependentUpon>201901241618075_MaxLengthOnNames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901242017318_UpdateStudent.resx">
-      <DependentUpon>201901242017318_UpdateStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901250954010_CreateInstructor.resx">
-      <DependentUpon>201901250954010_CreateInstructor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901250959453_CreateOfficeAssignment.resx">
-      <DependentUpon>201901250959453_CreateOfficeAssignment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901251025295_CreateDepartment.resx">
-      <DependentUpon>201901251025295_CreateDepartment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901251027135_CreateRepationships.resx">
-      <DependentUpon>201901251027135_CreateRepationships.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901251720066_RenameColumns.resx">
-      <DependentUpon>201901251720066_RenameColumns.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901281906128_InitialMigration.resx">
+      <DependentUpon>201901281906128_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
