@@ -16,17 +16,19 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.CourseID, "CourseID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CourseID, "Course", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("CourseID", null, "Select Course", htmlAttributes: new { @class = "form-control" })
+                @*@Html.DropDownListFor(m => m.CourseID, new SelectList(Model.Course, "CourseID", "Title"), "Select Course", new { @class = "form-control" })*@
+                @*    @Html.DropDownListFor(m => m.Movie.GenreTypeId, new SelectList(Model.GenreTypes, "Id", "Name"), "Select Movie Genre", new { @class = "form-control" }) *@
                 @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.StudentID, "StudentID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.StudentID, "Student", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("StudentID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("StudentID", null, "Select Student", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.StudentID, "", new { @class = "text-danger" })
             </div>
         </div>

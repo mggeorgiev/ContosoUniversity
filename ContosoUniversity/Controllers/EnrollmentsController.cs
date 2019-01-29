@@ -93,7 +93,7 @@ namespace ContosoUniversity.Controllers
         public ActionResult Create()
         {
             ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "Title");
-            ViewBag.StudentID = new SelectList(db.Students.OrderBy(s => s.LastName), "ID", "LastName");
+            ViewBag.StudentID = new SelectList(db.Students.OrderBy(s => s.LastName), "ID", "Fullname");
             return View();
         }
 
@@ -111,8 +111,10 @@ namespace ContosoUniversity.Controllers
                 return RedirectToAction("Index");
             }
 
+            //new SelectList(Model.GenreTypes, "Id", "Name"), "Select Movie Genre", new { @class = "form-control" })
+
             ViewBag.CourseID = new SelectList(db.Courses.OrderBy(x => x.Title), "CourseID", "Title", enrollment.CourseID);
-            ViewBag.StudentID = new SelectList(db.Students.OrderBy(s => s.LastName), "ID", "LastName", enrollment.StudentID);
+            ViewBag.StudentID = new SelectList(db.Students.OrderBy(s => s.LastName), "ID", "Fullname", enrollment.StudentID);
             return View(enrollment);
         }
 
@@ -147,7 +149,7 @@ namespace ContosoUniversity.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CourseID = new SelectList(db.Courses.OrderBy(x => x.Title), "CourseID", "Title", enrollment.CourseID);
-            ViewBag.StudentID = new SelectList(db.Students.OrderBy(s => s.LastName), "ID", "LastName", enrollment.StudentID);
+            ViewBag.StudentID = new SelectList(db.Students.OrderBy(s => s.LastName), "ID", "Fullname", enrollment.StudentID);
             return View(enrollment);
         }
 
