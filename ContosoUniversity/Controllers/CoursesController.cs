@@ -21,18 +21,28 @@ namespace ContosoUniversity.Controllers
             ViewBag.CreditsSortParam = sortOrder == "credits" ? "credits_desc" : "credits";
             ViewBag.DepartmentSortParam = sortOrder == "department" ? "department_desc" : "department";
 
+            ViewBag.CurrentSortOrder = sortOrder;
+            ViewBag.CurrentSearchString = searchString;
+
             var courses = db.Courses.Include(c => c.Department);
 
             if (searchString != null)
             {
                 page = 1;
             }
+            else
             {
                 searchString = currentFilter;
             }
 
             ViewBag.CurrentFilter = searchString;
 
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                courses = courses.Where(c => c.Title.Contains(searchString) ||
+                                            c.Department.Name.Contains(searchString));
+            }
 
 
             switch (sortOrder)
