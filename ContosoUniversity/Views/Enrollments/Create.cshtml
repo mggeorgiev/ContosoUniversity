@@ -7,47 +7,45 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Enrollment</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        
-        <div class="form-group">
-            @Html.LabelFor(model => model.CourseID, "Course", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.StudentID, "Student", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("StudentID", null, "Select Student", htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.StudentID, "Please select Student", new { @class = "text-danger" })
-                </div>
-            </div>
 
-            <div class="col-md-10">
-                @Html.DropDownList("CourseID", null, "Select Course", htmlAttributes: new { @class = "form-control" })
-                @*@Html.DropDownListFor(m => m.CourseID, new SelectList(Model.Course, "CourseID", "Title"), "Select Course", new { @class = "form-control" })*@
-                @*    @Html.DropDownListFor(m => m.Movie.GenreTypeId, new SelectList(Model.GenreTypes, "Id", "Name"), "Select Movie Genre", new { @class = "form-control" }) *@
-                @Html.ValidationMessageFor(model => model.CourseID, "Please select Course", new { @class = "text-danger" })
-            </div>
-        </div>
+<div class="form-horizontal">
+    <h4>Enrollment</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Grade, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.Grade, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Grade, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.StudentID, "Student", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("StudentID", null, "Select Student", htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.StudentID, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CourseID, "Course", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("CourseID", null, "Select Course", htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Grade, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.Grade, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Grade, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
 }
 
 <div>

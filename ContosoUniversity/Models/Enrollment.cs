@@ -10,8 +10,13 @@ namespace ContosoUniversity.Models
     public class Enrollment
     {
         public int EnrollmentID { get; set; }
+
+        [Display(Name ="Course")]
         public int CourseID { get; set; }
+
+        [Display(Name ="Student")]
         public int StudentID { get; set; }
+
         [DisplayFormat(NullDisplayText = "No grade")]
         public Grade? Grade { get; set; }
 

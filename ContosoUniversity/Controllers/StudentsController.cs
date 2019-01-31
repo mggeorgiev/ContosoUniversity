@@ -96,6 +96,15 @@ namespace ContosoUniversity.Controllers
             return View();
         }
 
+        /*public ActionResult Create()
+        {
+            var student = new Student();
+            student.Enrollments .Courses = new List<Course>();
+            PopulateAssignedCourseData(instructor);
+            return View();
+        }
+        */
+
         // POST: Students/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -136,6 +145,8 @@ namespace ContosoUniversity.Controllers
             }
             return View(student);
         }
+
+
 
         // POST: Students/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
