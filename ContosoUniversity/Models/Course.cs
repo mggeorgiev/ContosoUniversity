@@ -16,6 +16,7 @@ namespace ContosoUniversity.Models
         [Range(0, 5)]
         public int Credits { get; set; }
 
+        [Display(Name = "Department")]
         public int DepartmentID { get; set; }
 
         public virtual Department Department { get; set; }

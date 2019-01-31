@@ -10,6 +10,7 @@ namespace ContosoUniversity.Models
         public int DepartmentID { get; set; }
 
         [StringLength(50, MinimumLength = 3)]
+        //[Required(ErrorMessage = "Please select department from the list")]
         public string Name { get; set; }
 
         [DataType(DataType.Currency)]

@@ -16,6 +16,7 @@
         <th>First Name</th>
         <th>Hire Date</th>
         <th>Office</th>
+        @*<th>Courses</th>*@
         <th></th>
     </tr>
 
@@ -45,6 +46,16 @@
                     @item.OfficeAssignment.Location
                 }
             </td>
+            @*
+            <td>
+                @{
+                    foreach (var course in item.Courses)
+                    {
+                        @course.CourseID @:  @course.Title <br />
+                    }
+                }
+            </td>
+            *@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ID }) |
@@ -54,7 +65,7 @@
     }
 </table>
 
-@if (Model.Courses != null)
+@if (Model.Courses != null && Model.Courses.Count() > 0)
 {
     <h3>Courses Taught by Selected Instructor</h3>
     <table class="table">
@@ -64,7 +75,6 @@
             <th>Title</th>
             <th>Department</th>
         </tr>
-
         @foreach (var item in Model.Courses)
         {
             string selectedRow = "";
@@ -89,6 +99,10 @@
         }
 
     </table>
+}
+else
+{
+    <h3>There are no courses taught by the Selected Instructor</h3>
 }
 
 @if (Model.Enrollments != null)
