@@ -138,7 +138,24 @@ namespace ContosoUniversity.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            //Student student = db.Students.Find(id);
+            //if (student == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(student);
+
+            Student student = db.Students
+                .Include(s => s.Enrollments)
+                .Where(s => s.ID == id)
+                .Single();
+
+            var courseQuery = from c in db.Courses
+                                   orderby c.Title
+                                   select c;
+            ViewBag.Courses = new SelectList(courseQuery, "CourseID", "Title");
+
+            //PopulateAssignedCourseData(instructor);
             if (student == null)
             {
                 return HttpNotFound();
