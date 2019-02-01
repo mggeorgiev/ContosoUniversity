@@ -41,7 +41,8 @@ namespace ContosoUniversity.Controllers
         // GET: Department/Create
         public ActionResult Create()
         {
-            ViewBag.InstructorID = new SelectList(db.Instructors, "ID", "LastName");
+            ViewBag.InstructorID = new SelectList(db.Instructors.OrderBy(i => i.LastName), "ID", "Fullname");
+
             return View();
         }
 
@@ -59,7 +60,7 @@ namespace ContosoUniversity.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.InstructorID = new SelectList(db.Instructors, "ID", "LastName", department.InstructorID);
+            ViewBag.InstructorID = new SelectList(db.Instructors.OrderBy(i => i.LastName), "ID", "Fullname", department.InstructorID);
             return View(department);
         }
 
@@ -75,7 +76,7 @@ namespace ContosoUniversity.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.InstructorID = new SelectList(db.Instructors, "ID", "LastName", department.InstructorID);
+            ViewBag.InstructorID = new SelectList(db.Instructors.OrderBy(i => i.LastName), "ID", "Fullname", department.InstructorID);
             return View(department);
         }
 
@@ -92,7 +93,7 @@ namespace ContosoUniversity.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.InstructorID = new SelectList(db.Instructors, "ID", "LastName", department.InstructorID);
+            ViewBag.InstructorID = new SelectList(db.Instructors.OrderBy(i => i.LastName), "ID", "Fullname", department.InstructorID);
             return View(department);
         }
 
