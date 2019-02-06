@@ -56,6 +56,13 @@ namespace ContosoUniversity.Controllers
             return View();
         }
 
+        public ActionResult News()
+        {
+            ViewBag.Message = "Your news page.";
+
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
