@@ -8,33 +8,31 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                @Html.ActionLink("Contoso University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav navbar-nav" })
-                    </li>
-                    <li>
-                        @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav navbar-nav" })
-                    </li>
-                </ul>
-                @Html.Partial("_NavBar")
+    <div class="wrapper">
+        @Html.Partial("_SideBar")
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    @Html.ActionLink("Contoso University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.Partial("_NavBar")
+                </div>
             </div>
         </div>
-    </div>
+        
+        <div id="content">
 
-    <div class="container">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Contoso University</p>
-        </footer>
+        </div>
+        
+        <div class="container">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Contoso University</p>
+            </footer>
+        </div>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

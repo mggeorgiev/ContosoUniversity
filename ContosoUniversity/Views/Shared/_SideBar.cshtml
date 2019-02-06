@@ -1,0 +1,36 @@
+﻿        <!-- Sidebar -->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>Bootstrap Sidebar</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+        <p>Menu</p>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>
+            <a href="#pageManagement" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Management</a>
+            <ul class="collapse list-unstyled" id="pageManagement">
+                <li>@Html.ActionLink("Students", "Index", "Students")</li>
+                <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+                <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+                <li>@Html.ActionLink("Enrollments", "Index", "Enrollments")</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>@Html.ActionLink("Students", "Index", "Students")</li>
+                <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+                <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+                <li>@Html.ActionLink("Enrollments", "Index", "Enrollments")</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+    @Html.Partial("_LoginPartial")
+</nav>
