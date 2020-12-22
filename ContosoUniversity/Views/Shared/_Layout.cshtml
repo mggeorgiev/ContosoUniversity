@@ -8,22 +8,24 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 @Html.ActionLink("Contoso University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav navbar-nav" })
-                    </li>
-                    <li>
-                        @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav navbar-nav" })
-                    </li>
-                </ul>
-                @Html.Partial("_NavBar")
-            </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+
+                        @Html.Partial("_NavBar")
+                    </ul>
+                </div>
+                @Html.Partial("_LoginPartial")
+            </nav>
         </div>
-    </div>
 
     <div class="container">
         @RenderBody()

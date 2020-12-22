@@ -1,17 +1,12 @@
-﻿<div class="nav navbar-nav">
-    <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            Menu
-            <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-            <li>@Html.ActionLink("Students", "Index", "Students")</li>
-            <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
-            <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
-            <li>@Html.ActionLink("Departments", "Index", "Department")</li>
-            <li>@Html.ActionLink("Enrollments", "Index", "Enrollments")</li>
-        </ul>
-    </li>
-</div>
-
-@Html.Partial("_LoginPartial")
+﻿<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        @Html.ActionLink("Students", "Index", "Students", null, new { @class = "dropdown-item" })
+        @Html.ActionLink("Courses", "Index", "Courses", null, new { @class = "dropdown-item" })
+        @Html.ActionLink("Instructors", "Index", "Instructor", null, new { @class = "dropdown-item" })
+        @Html.ActionLink("Departments", "Index", "Department", null, new { @class = "dropdown-item" })
+        @Html.ActionLink("Enrollments", "Index", "Enrollments", null, new { @class = "dropdown-item" })
+    </div>
+</li>
