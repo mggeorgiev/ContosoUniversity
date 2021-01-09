@@ -1,30 +1,17 @@
 /*!
-<<<<<<< HEAD
-  * Bootstrap v4.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-=======
   * Bootstrap v4.5.3 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
-<<<<<<< HEAD
-  (global = global || self, factory(global.bootstrap = {}, global.jQuery));
-}(this, function (exports, $) { 'use strict';
-
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-=======
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.bootstrap = {}, global.jQuery));
 }(this, (function (exports, $) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -42,40 +29,6 @@
     return Constructor;
   }
 
-<<<<<<< HEAD
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function _objectSpread(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-      var ownKeys = Object.keys(source);
-
-      if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-        }));
-      }
-
-      ownKeys.forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    }
-
-    return target;
-=======
   function _extends() {
     _extends = Object.assign || function (target) {
       for (var i = 1; i < arguments.length; i++) {
@@ -92,7 +45,6 @@
     };
 
     return _extends.apply(this, arguments);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   }
 
   function _inheritsLoose(subClass, superClass) {
@@ -103,13 +55,8 @@
 
   /**
    * --------------------------------------------------------------------------
-<<<<<<< HEAD
-   * Bootstrap (v4.3.1): util.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-=======
    * Bootstrap (v4.5.3): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
    * --------------------------------------------------------------------------
    */
   /**
@@ -123,13 +70,10 @@
   var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   function toType(obj) {
-<<<<<<< HEAD
-=======
     if (obj === null || typeof obj === 'undefined') {
       return "" + obj;
     }
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
   }
 
@@ -138,19 +82,11 @@
       bindType: TRANSITION_END,
       delegateType: TRANSITION_END,
       handle: function handle(event) {
-<<<<<<< HEAD
-        if ($(event.target).is(this)) {
-          return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
-        }
-
-        return undefined; // eslint-disable-line no-undefined
-=======
         if ($__default['default'](event.target).is(this)) {
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
 
         return undefined;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
   }
@@ -159,11 +95,7 @@
     var _this = this;
 
     var called = false;
-<<<<<<< HEAD
-    $(this).one(Util.TRANSITION_END, function () {
-=======
     $__default['default'](this).one(Util.TRANSITION_END, function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       called = true;
     });
     setTimeout(function () {
@@ -175,13 +107,8 @@
   }
 
   function setTransitionEndSupport() {
-<<<<<<< HEAD
-    $.fn.emulateTransitionEnd = transitionEndEmulator;
-    $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
-=======
     $__default['default'].fn.emulateTransitionEnd = transitionEndEmulator;
     $__default['default'].event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   }
   /**
    * --------------------------------------------------------------------------
@@ -194,10 +121,6 @@
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
       do {
-<<<<<<< HEAD
-        // eslint-disable-next-line no-bitwise
-=======
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
@@ -213,11 +136,7 @@
 
       try {
         return document.querySelector(selector) ? selector : null;
-<<<<<<< HEAD
-      } catch (err) {
-=======
       } catch (_) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return null;
       }
     },
@@ -227,13 +146,8 @@
       } // Get transition-duration of the element
 
 
-<<<<<<< HEAD
-      var transitionDuration = $(element).css('transition-duration');
-      var transitionDelay = $(element).css('transition-delay');
-=======
       var transitionDuration = $__default['default'](element).css('transition-duration');
       var transitionDelay = $__default['default'](element).css('transition-delay');
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var floatTransitionDuration = parseFloat(transitionDuration);
       var floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
 
@@ -250,14 +164,8 @@
       return element.offsetHeight;
     },
     triggerTransitionEnd: function triggerTransitionEnd(element) {
-<<<<<<< HEAD
-      $(element).trigger(TRANSITION_END);
-    },
-    // TODO: Remove in v5
-=======
       $__default['default'](element).trigger(TRANSITION_END);
     },
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     supportsTransitionEnd: function supportsTransitionEnd() {
       return Boolean(TRANSITION_END);
     },
@@ -298,10 +206,6 @@
       }
 
       return Util.findShadowRoot(element.parentNode);
-<<<<<<< HEAD
-    }
-  };
-=======
     },
     jQueryDetection: function jQueryDetection() {
       if (typeof $__default['default'] === 'undefined') {
@@ -321,7 +225,6 @@
     }
   };
   Util.jQueryDetection();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   setTransitionEndSupport();
 
   /**
@@ -331,36 +234,6 @@
    */
 
   var NAME = 'alert';
-<<<<<<< HEAD
-  var VERSION = '4.3.1';
-  var DATA_KEY = 'bs.alert';
-  var EVENT_KEY = "." + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var Selector = {
-    DISMISS: '[data-dismiss="alert"]'
-  };
-  var Event = {
-    CLOSE: "close" + EVENT_KEY,
-    CLOSED: "closed" + EVENT_KEY,
-    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-  };
-  var ClassName = {
-    ALERT: 'alert',
-    FADE: 'fade',
-    SHOW: 'show'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Alert =
-  /*#__PURE__*/
-  function () {
-=======
   var VERSION = '4.5.3';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
@@ -380,7 +253,6 @@
    */
 
   var Alert = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function Alert(element) {
       this._element = element;
     } // Getters
@@ -406,11 +278,7 @@
     };
 
     _proto.dispose = function dispose() {
-<<<<<<< HEAD
-      $.removeData(this._element, DATA_KEY);
-=======
       $__default['default'].removeData(this._element, DATA_KEY);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element = null;
     } // Private
     ;
@@ -424,70 +292,43 @@
       }
 
       if (!parent) {
-<<<<<<< HEAD
-        parent = $(element).closest("." + ClassName.ALERT)[0];
-=======
         parent = $__default['default'](element).closest("." + CLASS_NAME_ALERT)[0];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       return parent;
     };
 
     _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-<<<<<<< HEAD
-      var closeEvent = $.Event(Event.CLOSE);
-      $(element).trigger(closeEvent);
-=======
       var closeEvent = $__default['default'].Event(EVENT_CLOSE);
       $__default['default'](element).trigger(closeEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       return closeEvent;
     };
 
     _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-<<<<<<< HEAD
-      $(element).removeClass(ClassName.SHOW);
-
-      if (!$(element).hasClass(ClassName.FADE)) {
-=======
       $__default['default'](element).removeClass(CLASS_NAME_SHOW);
 
       if (!$__default['default'](element).hasClass(CLASS_NAME_FADE)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         this._destroyElement(element);
 
         return;
       }
 
       var transitionDuration = Util.getTransitionDurationFromElement(element);
-<<<<<<< HEAD
-      $(element).one(Util.TRANSITION_END, function (event) {
-=======
       $__default['default'](element).one(Util.TRANSITION_END, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return _this._destroyElement(element, event);
       }).emulateTransitionEnd(transitionDuration);
     };
 
     _proto._destroyElement = function _destroyElement(element) {
-<<<<<<< HEAD
-      $(element).detach().trigger(Event.CLOSED).remove();
-=======
       $__default['default'](element).detach().trigger(EVENT_CLOSED).remove();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     } // Static
     ;
 
     Alert._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var $element = $(this);
-=======
         var $element = $__default['default'](this);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         var data = $element.data(DATA_KEY);
 
         if (!data) {
@@ -527,30 +368,18 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
-=======
   $__default['default'](document).on(EVENT_CLICK_DATA_API, SELECTOR_DISMISS, Alert._handleDismiss(new Alert()));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   /**
    * ------------------------------------------------------------------------
    * jQuery
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME] = Alert._jQueryInterface;
-  $.fn[NAME].Constructor = Alert;
-
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
-=======
   $__default['default'].fn[NAME] = Alert._jQueryInterface;
   $__default['default'].fn[NAME].Constructor = Alert;
 
   $__default['default'].fn[NAME].noConflict = function () {
     $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Alert._jQueryInterface;
   };
 
@@ -561,41 +390,6 @@
    */
 
   var NAME$1 = 'button';
-<<<<<<< HEAD
-  var VERSION$1 = '4.3.1';
-  var DATA_KEY$1 = 'bs.button';
-  var EVENT_KEY$1 = "." + DATA_KEY$1;
-  var DATA_API_KEY$1 = '.data-api';
-  var JQUERY_NO_CONFLICT$1 = $.fn[NAME$1];
-  var ClassName$1 = {
-    ACTIVE: 'active',
-    BUTTON: 'btn',
-    FOCUS: 'focus'
-  };
-  var Selector$1 = {
-    DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-    DATA_TOGGLE: '[data-toggle="buttons"]',
-    INPUT: 'input:not([type="hidden"])',
-    ACTIVE: '.active',
-    BUTTON: '.btn'
-  };
-  var Event$1 = {
-    CLICK_DATA_API: "click" + EVENT_KEY$1 + DATA_API_KEY$1,
-    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1)
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Button =
-  /*#__PURE__*/
-  function () {
-    function Button(element) {
-      this._element = element;
-=======
   var VERSION$1 = '4.5.3';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
@@ -624,7 +418,6 @@
     function Button(element) {
       this._element = element;
       this.shouldAvoidTriggerChange = false;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     } // Getters
 
 
@@ -634,22 +427,6 @@
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
-<<<<<<< HEAD
-      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
-
-      if (rootElement) {
-        var input = this._element.querySelector(Selector$1.INPUT);
-
-        if (input) {
-          if (input.type === 'radio') {
-            if (input.checked && this._element.classList.contains(ClassName$1.ACTIVE)) {
-              triggerChangeEvent = false;
-            } else {
-              var activeElement = rootElement.querySelector(Selector$1.ACTIVE);
-
-              if (activeElement) {
-                $(activeElement).removeClass(ClassName$1.ACTIVE);
-=======
       var rootElement = $__default['default'](this._element).closest(SELECTOR_DATA_TOGGLES)[0];
 
       if (rootElement) {
@@ -664,20 +441,11 @@
 
               if (activeElement) {
                 $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
               }
             }
           }
 
           if (triggerChangeEvent) {
-<<<<<<< HEAD
-            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
-              return;
-            }
-
-            input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
-            $(input).trigger('change');
-=======
             // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
             if (input.type === 'checkbox' || input.type === 'radio') {
               input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
@@ -686,7 +454,6 @@
             if (!this.shouldAvoidTriggerChange) {
               $__default['default'](input).trigger('change');
             }
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           }
 
           input.focus();
@@ -694,14 +461,6 @@
         }
       }
 
-<<<<<<< HEAD
-      if (addAriaPressed) {
-        this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
-      }
-
-      if (triggerChangeEvent) {
-        $(this._element).toggleClass(ClassName$1.ACTIVE);
-=======
       if (!(this._element.hasAttribute('disabled') || this._element.classList.contains('disabled'))) {
         if (addAriaPressed) {
           this._element.setAttribute('aria-pressed', !this._element.classList.contains(CLASS_NAME_ACTIVE));
@@ -710,31 +469,15 @@
         if (triggerChangeEvent) {
           $__default['default'](this._element).toggleClass(CLASS_NAME_ACTIVE);
         }
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
     _proto.dispose = function dispose() {
-<<<<<<< HEAD
-      $.removeData(this._element, DATA_KEY$1);
-=======
       $__default['default'].removeData(this._element, DATA_KEY$1);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element = null;
     } // Static
     ;
 
-<<<<<<< HEAD
-    Button._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var data = $(this).data(DATA_KEY$1);
-
-        if (!data) {
-          data = new Button(this);
-          $(this).data(DATA_KEY$1, data);
-        }
-
-=======
     Button._jQueryInterface = function _jQueryInterface(config, avoidTriggerChange) {
       return this.each(function () {
         var $element = $__default['default'](this);
@@ -747,7 +490,6 @@
 
         data.shouldAvoidTriggerChange = avoidTriggerChange;
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         if (config === 'toggle') {
           data[config]();
         }
@@ -770,20 +512,6 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    event.preventDefault();
-    var button = event.target;
-
-    if (!$(button).hasClass(ClassName$1.BUTTON)) {
-      button = $(button).closest(Selector$1.BUTTON);
-    }
-
-    Button._jQueryInterface.call($(button), 'toggle');
-  }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    var button = $(event.target).closest(Selector$1.BUTTON)[0];
-    $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
-=======
   $__default['default'](document).on(EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
     var button = event.target;
     var initialButton = button;
@@ -839,7 +567,6 @@
         _button.classList.remove(CLASS_NAME_ACTIVE);
       }
     }
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   });
   /**
    * ------------------------------------------------------------------------
@@ -847,19 +574,11 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$1] = Button._jQueryInterface;
-  $.fn[NAME$1].Constructor = Button;
-
-  $.fn[NAME$1].noConflict = function () {
-    $.fn[NAME$1] = JQUERY_NO_CONFLICT$1;
-=======
   $__default['default'].fn[NAME$1] = Button._jQueryInterface;
   $__default['default'].fn[NAME$1].Constructor = Button;
 
   $__default['default'].fn[NAME$1].noConflict = function () {
     $__default['default'].fn[NAME$1] = JQUERY_NO_CONFLICT$1;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Button._jQueryInterface;
   };
 
@@ -870,19 +589,11 @@
    */
 
   var NAME$2 = 'carousel';
-<<<<<<< HEAD
-  var VERSION$2 = '4.3.1';
-  var DATA_KEY$2 = 'bs.carousel';
-  var EVENT_KEY$2 = "." + DATA_KEY$2;
-  var DATA_API_KEY$2 = '.data-api';
-  var JQUERY_NO_CONFLICT$2 = $.fn[NAME$2];
-=======
   var VERSION$2 = '4.5.3';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
   var JQUERY_NO_CONFLICT$2 = $__default['default'].fn[NAME$2];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
@@ -906,64 +617,6 @@
     wrap: 'boolean',
     touch: 'boolean'
   };
-<<<<<<< HEAD
-  var Direction = {
-    NEXT: 'next',
-    PREV: 'prev',
-    LEFT: 'left',
-    RIGHT: 'right'
-  };
-  var Event$2 = {
-    SLIDE: "slide" + EVENT_KEY$2,
-    SLID: "slid" + EVENT_KEY$2,
-    KEYDOWN: "keydown" + EVENT_KEY$2,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$2,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$2,
-    TOUCHSTART: "touchstart" + EVENT_KEY$2,
-    TOUCHMOVE: "touchmove" + EVENT_KEY$2,
-    TOUCHEND: "touchend" + EVENT_KEY$2,
-    POINTERDOWN: "pointerdown" + EVENT_KEY$2,
-    POINTERUP: "pointerup" + EVENT_KEY$2,
-    DRAG_START: "dragstart" + EVENT_KEY$2,
-    LOAD_DATA_API: "load" + EVENT_KEY$2 + DATA_API_KEY$2,
-    CLICK_DATA_API: "click" + EVENT_KEY$2 + DATA_API_KEY$2
-  };
-  var ClassName$2 = {
-    CAROUSEL: 'carousel',
-    ACTIVE: 'active',
-    SLIDE: 'slide',
-    RIGHT: 'carousel-item-right',
-    LEFT: 'carousel-item-left',
-    NEXT: 'carousel-item-next',
-    PREV: 'carousel-item-prev',
-    ITEM: 'carousel-item',
-    POINTER_EVENT: 'pointer-event'
-  };
-  var Selector$2 = {
-    ACTIVE: '.active',
-    ACTIVE_ITEM: '.active.carousel-item',
-    ITEM: '.carousel-item',
-    ITEM_IMG: '.carousel-item img',
-    NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
-    INDICATORS: '.carousel-indicators',
-    DATA_SLIDE: '[data-slide], [data-slide-to]',
-    DATA_RIDE: '[data-ride="carousel"]'
-  };
-  var PointerType = {
-    TOUCH: 'touch',
-    PEN: 'pen'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Carousel =
-  /*#__PURE__*/
-  function () {
-=======
   var DIRECTION_NEXT = 'next';
   var DIRECTION_PREV = 'prev';
   var DIRECTION_LEFT = 'left';
@@ -1008,7 +661,6 @@
    */
 
   var Carousel = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function Carousel(element, config) {
       this._items = null;
       this._interval = null;
@@ -1020,11 +672,7 @@
       this.touchDeltaX = 0;
       this._config = this._getConfig(config);
       this._element = element;
-<<<<<<< HEAD
-      this._indicatorsElement = this._element.querySelector(Selector$2.INDICATORS);
-=======
       this._indicatorsElement = this._element.querySelector(SELECTOR_INDICATORS);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
       this._pointerEvent = Boolean(window.PointerEvent || window.MSPointerEvent);
 
@@ -1037,36 +685,22 @@
     // Public
     _proto.next = function next() {
       if (!this._isSliding) {
-<<<<<<< HEAD
-        this._slide(Direction.NEXT);
-=======
         this._slide(DIRECTION_NEXT);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
     _proto.nextWhenVisible = function nextWhenVisible() {
-<<<<<<< HEAD
-      // Don't call next when the page isn't visible
-      // or the carousel or its parent isn't visible
-      if (!document.hidden && $(this._element).is(':visible') && $(this._element).css('visibility') !== 'hidden') {
-=======
       var $element = $__default['default'](this._element); // Don't call next when the page isn't visible
       // or the carousel or its parent isn't visible
 
       if (!document.hidden && $element.is(':visible') && $element.css('visibility') !== 'hidden') {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         this.next();
       }
     };
 
     _proto.prev = function prev() {
       if (!this._isSliding) {
-<<<<<<< HEAD
-        this._slide(Direction.PREV);
-=======
         this._slide(DIRECTION_PREV);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
@@ -1075,11 +709,7 @@
         this._isPaused = true;
       }
 
-<<<<<<< HEAD
-      if (this._element.querySelector(Selector$2.NEXT_PREV)) {
-=======
       if (this._element.querySelector(SELECTOR_NEXT_PREV)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         Util.triggerTransitionEnd(this._element);
         this.cycle(true);
       }
@@ -1106,11 +736,7 @@
     _proto.to = function to(index) {
       var _this = this;
 
-<<<<<<< HEAD
-      this._activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
-=======
       this._activeElement = this._element.querySelector(SELECTOR_ACTIVE_ITEM);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var activeIndex = this._getItemIndex(this._activeElement);
 
@@ -1119,11 +745,7 @@
       }
 
       if (this._isSliding) {
-<<<<<<< HEAD
-        $(this._element).one(Event$2.SLID, function () {
-=======
         $__default['default'](this._element).one(EVENT_SLID, function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return _this.to(index);
         });
         return;
@@ -1135,23 +757,14 @@
         return;
       }
 
-<<<<<<< HEAD
-      var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
-=======
       var direction = index > activeIndex ? DIRECTION_NEXT : DIRECTION_PREV;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       this._slide(direction, this._items[index]);
     };
 
     _proto.dispose = function dispose() {
-<<<<<<< HEAD
-      $(this._element).off(EVENT_KEY$2);
-      $.removeData(this._element, DATA_KEY$2);
-=======
       $__default['default'](this._element).off(EVENT_KEY$2);
       $__default['default'].removeData(this._element, DATA_KEY$2);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._items = null;
       this._config = null;
       this._element = null;
@@ -1164,11 +777,7 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      config = _objectSpread({}, Default, config);
-=======
       config = _extends({}, Default, config);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       Util.typeCheckConfig(NAME$2, config, DefaultType);
       return config;
     };
@@ -1180,12 +789,8 @@
         return;
       }
 
-<<<<<<< HEAD
-      var direction = absDeltax / this.touchDeltaX; // swipe left
-=======
       var direction = absDeltax / this.touchDeltaX;
       this.touchDeltaX = 0; // swipe left
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (direction > 0) {
         this.prev();
@@ -1201,25 +806,15 @@
       var _this2 = this;
 
       if (this._config.keyboard) {
-<<<<<<< HEAD
-        $(this._element).on(Event$2.KEYDOWN, function (event) {
-=======
         $__default['default'](this._element).on(EVENT_KEYDOWN, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return _this2._keydown(event);
         });
       }
 
       if (this._config.pause === 'hover') {
-<<<<<<< HEAD
-        $(this._element).on(Event$2.MOUSEENTER, function (event) {
-          return _this2.pause(event);
-        }).on(Event$2.MOUSELEAVE, function (event) {
-=======
         $__default['default'](this._element).on(EVENT_MOUSEENTER, function (event) {
           return _this2.pause(event);
         }).on(EVENT_MOUSELEAVE, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return _this2.cycle(event);
         });
       }
@@ -1280,33 +875,11 @@
         }
       };
 
-<<<<<<< HEAD
-      $(this._element.querySelectorAll(Selector$2.ITEM_IMG)).on(Event$2.DRAG_START, function (e) {
-=======
       $__default['default'](this._element.querySelectorAll(SELECTOR_ITEM_IMG)).on(EVENT_DRAG_START, function (e) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return e.preventDefault();
       });
 
       if (this._pointerEvent) {
-<<<<<<< HEAD
-        $(this._element).on(Event$2.POINTERDOWN, function (event) {
-          return start(event);
-        });
-        $(this._element).on(Event$2.POINTERUP, function (event) {
-          return end(event);
-        });
-
-        this._element.classList.add(ClassName$2.POINTER_EVENT);
-      } else {
-        $(this._element).on(Event$2.TOUCHSTART, function (event) {
-          return start(event);
-        });
-        $(this._element).on(Event$2.TOUCHMOVE, function (event) {
-          return move(event);
-        });
-        $(this._element).on(Event$2.TOUCHEND, function (event) {
-=======
         $__default['default'](this._element).on(EVENT_POINTERDOWN, function (event) {
           return start(event);
         });
@@ -1323,7 +896,6 @@
           return move(event);
         });
         $__default['default'](this._element).on(EVENT_TOUCHEND, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return end(event);
         });
       }
@@ -1344,31 +916,17 @@
           event.preventDefault();
           this.next();
           break;
-<<<<<<< HEAD
-
-        default:
-=======
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
     _proto._getItemIndex = function _getItemIndex(element) {
-<<<<<<< HEAD
-      this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(Selector$2.ITEM)) : [];
-=======
       this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(SELECTOR_ITEM)) : [];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       return this._items.indexOf(element);
     };
 
     _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
-<<<<<<< HEAD
-      var isNextDirection = direction === Direction.NEXT;
-      var isPrevDirection = direction === Direction.PREV;
-=======
       var isNextDirection = direction === DIRECTION_NEXT;
       var isPrevDirection = direction === DIRECTION_PREV;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var activeIndex = this._getItemIndex(activeElement);
 
@@ -1379,11 +937,7 @@
         return activeElement;
       }
 
-<<<<<<< HEAD
-      var delta = direction === Direction.PREV ? -1 : 1;
-=======
       var delta = direction === DIRECTION_PREV ? -1 : 1;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var itemIndex = (activeIndex + delta) % this._items.length;
       return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
     };
@@ -1391,46 +945,27 @@
     _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
       var targetIndex = this._getItemIndex(relatedTarget);
 
-<<<<<<< HEAD
-      var fromIndex = this._getItemIndex(this._element.querySelector(Selector$2.ACTIVE_ITEM));
-
-      var slideEvent = $.Event(Event$2.SLIDE, {
-=======
       var fromIndex = this._getItemIndex(this._element.querySelector(SELECTOR_ACTIVE_ITEM));
 
       var slideEvent = $__default['default'].Event(EVENT_SLIDE, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         relatedTarget: relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
         to: targetIndex
       });
-<<<<<<< HEAD
-      $(this._element).trigger(slideEvent);
-=======
       $__default['default'](this._element).trigger(slideEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       return slideEvent;
     };
 
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-<<<<<<< HEAD
-        var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(Selector$2.ACTIVE));
-        $(indicators).removeClass(ClassName$2.ACTIVE);
-=======
         var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(SELECTOR_ACTIVE$1));
         $__default['default'](indicators).removeClass(CLASS_NAME_ACTIVE$1);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
 
         if (nextIndicator) {
-<<<<<<< HEAD
-          $(nextIndicator).addClass(ClassName$2.ACTIVE);
-=======
           $__default['default'](nextIndicator).addClass(CLASS_NAME_ACTIVE$1);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
       }
     };
@@ -1438,11 +973,7 @@
     _proto._slide = function _slide(direction, element) {
       var _this4 = this;
 
-<<<<<<< HEAD
-      var activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
-=======
       var activeElement = this._element.querySelector(SELECTOR_ACTIVE_ITEM);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var activeElementIndex = this._getItemIndex(activeElement);
 
@@ -1455,19 +986,6 @@
       var orderClassName;
       var eventDirectionName;
 
-<<<<<<< HEAD
-      if (direction === Direction.NEXT) {
-        directionalClassName = ClassName$2.LEFT;
-        orderClassName = ClassName$2.NEXT;
-        eventDirectionName = Direction.LEFT;
-      } else {
-        directionalClassName = ClassName$2.RIGHT;
-        orderClassName = ClassName$2.PREV;
-        eventDirectionName = Direction.RIGHT;
-      }
-
-      if (nextElement && $(nextElement).hasClass(ClassName$2.ACTIVE)) {
-=======
       if (direction === DIRECTION_NEXT) {
         directionalClassName = CLASS_NAME_LEFT;
         orderClassName = CLASS_NAME_NEXT;
@@ -1479,7 +997,6 @@
       }
 
       if (nextElement && $__default['default'](nextElement).hasClass(CLASS_NAME_ACTIVE$1)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         this._isSliding = false;
         return;
       }
@@ -1503,30 +1020,18 @@
 
       this._setActiveIndicatorElement(nextElement);
 
-<<<<<<< HEAD
-      var slidEvent = $.Event(Event$2.SLID, {
-=======
       var slidEvent = $__default['default'].Event(EVENT_SLID, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         relatedTarget: nextElement,
         direction: eventDirectionName,
         from: activeElementIndex,
         to: nextElementIndex
       });
 
-<<<<<<< HEAD
-      if ($(this._element).hasClass(ClassName$2.SLIDE)) {
-        $(nextElement).addClass(orderClassName);
-        Util.reflow(nextElement);
-        $(activeElement).addClass(directionalClassName);
-        $(nextElement).addClass(directionalClassName);
-=======
       if ($__default['default'](this._element).hasClass(CLASS_NAME_SLIDE)) {
         $__default['default'](nextElement).addClass(orderClassName);
         Util.reflow(nextElement);
         $__default['default'](activeElement).addClass(directionalClassName);
         $__default['default'](nextElement).addClass(directionalClassName);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         var nextElementInterval = parseInt(nextElement.getAttribute('data-interval'), 10);
 
         if (nextElementInterval) {
@@ -1537,21 +1042,6 @@
         }
 
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
-<<<<<<< HEAD
-        $(activeElement).one(Util.TRANSITION_END, function () {
-          $(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName$2.ACTIVE);
-          $(activeElement).removeClass(ClassName$2.ACTIVE + " " + orderClassName + " " + directionalClassName);
-          _this4._isSliding = false;
-          setTimeout(function () {
-            return $(_this4._element).trigger(slidEvent);
-          }, 0);
-        }).emulateTransitionEnd(transitionDuration);
-      } else {
-        $(activeElement).removeClass(ClassName$2.ACTIVE);
-        $(nextElement).addClass(ClassName$2.ACTIVE);
-        this._isSliding = false;
-        $(this._element).trigger(slidEvent);
-=======
         $__default['default'](activeElement).one(Util.TRANSITION_END, function () {
           $__default['default'](nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
           $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE$1 + " " + orderClassName + " " + directionalClassName);
@@ -1565,7 +1055,6 @@
         $__default['default'](nextElement).addClass(CLASS_NAME_ACTIVE$1);
         this._isSliding = false;
         $__default['default'](this._element).trigger(slidEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       if (isCycling) {
@@ -1576,32 +1065,19 @@
 
     Carousel._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var data = $(this).data(DATA_KEY$2);
-
-        var _config = _objectSpread({}, Default, $(this).data());
-
-        if (typeof config === 'object') {
-          _config = _objectSpread({}, _config, config);
-=======
         var data = $__default['default'](this).data(DATA_KEY$2);
 
         var _config = _extends({}, Default, $__default['default'](this).data());
 
         if (typeof config === 'object') {
           _config = _extends({}, _config, config);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         var action = typeof config === 'string' ? config : _config.slide;
 
         if (!data) {
           data = new Carousel(this, _config);
-<<<<<<< HEAD
-          $(this).data(DATA_KEY$2, data);
-=======
           $__default['default'](this).data(DATA_KEY$2, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'number') {
@@ -1626,15 +1102,6 @@
         return;
       }
 
-<<<<<<< HEAD
-      var target = $(selector)[0];
-
-      if (!target || !$(target).hasClass(ClassName$2.CAROUSEL)) {
-        return;
-      }
-
-      var config = _objectSpread({}, $(target).data(), $(this).data());
-=======
       var target = $__default['default'](selector)[0];
 
       if (!target || !$__default['default'](target).hasClass(CLASS_NAME_CAROUSEL)) {
@@ -1642,7 +1109,6 @@
       }
 
       var config = _extends({}, $__default['default'](target).data(), $__default['default'](this).data());
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var slideIndex = this.getAttribute('data-slide-to');
 
@@ -1650,17 +1116,10 @@
         config.interval = false;
       }
 
-<<<<<<< HEAD
-      Carousel._jQueryInterface.call($(target), config);
-
-      if (slideIndex) {
-        $(target).data(DATA_KEY$2).to(slideIndex);
-=======
       Carousel._jQueryInterface.call($__default['default'](target), config);
 
       if (slideIndex) {
         $__default['default'](target).data(DATA_KEY$2).to(slideIndex);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       event.preventDefault();
@@ -1687,21 +1146,12 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event$2.CLICK_DATA_API, Selector$2.DATA_SLIDE, Carousel._dataApiClickHandler);
-  $(window).on(Event$2.LOAD_DATA_API, function () {
-    var carousels = [].slice.call(document.querySelectorAll(Selector$2.DATA_RIDE));
-
-    for (var i = 0, len = carousels.length; i < len; i++) {
-      var $carousel = $(carousels[i]);
-=======
   $__default['default'](document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
   $__default['default'](window).on(EVENT_LOAD_DATA_API$1, function () {
     var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
 
     for (var i = 0, len = carousels.length; i < len; i++) {
       var $carousel = $__default['default'](carousels[i]);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       Carousel._jQueryInterface.call($carousel, $carousel.data());
     }
@@ -1712,19 +1162,11 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$2] = Carousel._jQueryInterface;
-  $.fn[NAME$2].Constructor = Carousel;
-
-  $.fn[NAME$2].noConflict = function () {
-    $.fn[NAME$2] = JQUERY_NO_CONFLICT$2;
-=======
   $__default['default'].fn[NAME$2] = Carousel._jQueryInterface;
   $__default['default'].fn[NAME$2].Constructor = Carousel;
 
   $__default['default'].fn[NAME$2].noConflict = function () {
     $__default['default'].fn[NAME$2] = JQUERY_NO_CONFLICT$2;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Carousel._jQueryInterface;
   };
 
@@ -1735,19 +1177,11 @@
    */
 
   var NAME$3 = 'collapse';
-<<<<<<< HEAD
-  var VERSION$3 = '4.3.1';
-  var DATA_KEY$3 = 'bs.collapse';
-  var EVENT_KEY$3 = "." + DATA_KEY$3;
-  var DATA_API_KEY$3 = '.data-api';
-  var JQUERY_NO_CONFLICT$3 = $.fn[NAME$3];
-=======
   var VERSION$3 = '4.5.3';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
   var JQUERY_NO_CONFLICT$3 = $__default['default'].fn[NAME$3];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var Default$1 = {
     toggle: true,
     parent: ''
@@ -1756,39 +1190,6 @@
     toggle: 'boolean',
     parent: '(string|element)'
   };
-<<<<<<< HEAD
-  var Event$3 = {
-    SHOW: "show" + EVENT_KEY$3,
-    SHOWN: "shown" + EVENT_KEY$3,
-    HIDE: "hide" + EVENT_KEY$3,
-    HIDDEN: "hidden" + EVENT_KEY$3,
-    CLICK_DATA_API: "click" + EVENT_KEY$3 + DATA_API_KEY$3
-  };
-  var ClassName$3 = {
-    SHOW: 'show',
-    COLLAPSE: 'collapse',
-    COLLAPSING: 'collapsing',
-    COLLAPSED: 'collapsed'
-  };
-  var Dimension = {
-    WIDTH: 'width',
-    HEIGHT: 'height'
-  };
-  var Selector$3 = {
-    ACTIVES: '.show, .collapsing',
-    DATA_TOGGLE: '[data-toggle="collapse"]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Collapse =
-  /*#__PURE__*/
-  function () {
-=======
   var EVENT_SHOW = "show" + EVENT_KEY$3;
   var EVENT_SHOWN = "shown" + EVENT_KEY$3;
   var EVENT_HIDE = "hide" + EVENT_KEY$3;
@@ -1809,17 +1210,12 @@
    */
 
   var Collapse = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function Collapse(element, config) {
       this._isTransitioning = false;
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = [].slice.call(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
-<<<<<<< HEAD
-      var toggleList = [].slice.call(document.querySelectorAll(Selector$3.DATA_TOGGLE));
-=======
       var toggleList = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$1));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       for (var i = 0, len = toggleList.length; i < len; i++) {
         var elem = toggleList[i];
@@ -1851,11 +1247,7 @@
 
     // Public
     _proto.toggle = function toggle() {
-<<<<<<< HEAD
-      if ($(this._element).hasClass(ClassName$3.SHOW)) {
-=======
       if ($__default['default'](this._element).hasClass(CLASS_NAME_SHOW$1)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         this.hide();
       } else {
         this.show();
@@ -1865,11 +1257,7 @@
     _proto.show = function show() {
       var _this = this;
 
-<<<<<<< HEAD
-      if (this._isTransitioning || $(this._element).hasClass(ClassName$3.SHOW)) {
-=======
       if (this._isTransitioning || $__default['default'](this._element).hasClass(CLASS_NAME_SHOW$1)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return;
       }
 
@@ -1877,20 +1265,12 @@
       var activesData;
 
       if (this._parent) {
-<<<<<<< HEAD
-        actives = [].slice.call(this._parent.querySelectorAll(Selector$3.ACTIVES)).filter(function (elem) {
-=======
         actives = [].slice.call(this._parent.querySelectorAll(SELECTOR_ACTIVES)).filter(function (elem) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           if (typeof _this._config.parent === 'string') {
             return elem.getAttribute('data-parent') === _this._config.parent;
           }
 
-<<<<<<< HEAD
-          return elem.classList.contains(ClassName$3.COLLAPSE);
-=======
           return elem.classList.contains(CLASS_NAME_COLLAPSE);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         });
 
         if (actives.length === 0) {
@@ -1899,109 +1279,64 @@
       }
 
       if (actives) {
-<<<<<<< HEAD
-        activesData = $(actives).not(this._selector).data(DATA_KEY$3);
-=======
         activesData = $__default['default'](actives).not(this._selector).data(DATA_KEY$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         if (activesData && activesData._isTransitioning) {
           return;
         }
       }
 
-<<<<<<< HEAD
-      var startEvent = $.Event(Event$3.SHOW);
-      $(this._element).trigger(startEvent);
-=======
       var startEvent = $__default['default'].Event(EVENT_SHOW);
       $__default['default'](this._element).trigger(startEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (startEvent.isDefaultPrevented()) {
         return;
       }
 
       if (actives) {
-<<<<<<< HEAD
-        Collapse._jQueryInterface.call($(actives).not(this._selector), 'hide');
-
-        if (!activesData) {
-          $(actives).data(DATA_KEY$3, null);
-=======
         Collapse._jQueryInterface.call($__default['default'](actives).not(this._selector), 'hide');
 
         if (!activesData) {
           $__default['default'](actives).data(DATA_KEY$3, null);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
       }
 
       var dimension = this._getDimension();
 
-<<<<<<< HEAD
-      $(this._element).removeClass(ClassName$3.COLLAPSE).addClass(ClassName$3.COLLAPSING);
-      this._element.style[dimension] = 0;
-
-      if (this._triggerArray.length) {
-        $(this._triggerArray).removeClass(ClassName$3.COLLAPSED).attr('aria-expanded', true);
-=======
       $__default['default'](this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
       this._element.style[dimension] = 0;
 
       if (this._triggerArray.length) {
         $__default['default'](this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       this.setTransitioning(true);
 
       var complete = function complete() {
-<<<<<<< HEAD
-        $(_this._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).addClass(ClassName$3.SHOW);
-=======
         $__default['default'](_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         _this._element.style[dimension] = '';
 
         _this.setTransitioning(false);
 
-<<<<<<< HEAD
-        $(_this._element).trigger(Event$3.SHOWN);
-=======
         $__default['default'](_this._element).trigger(EVENT_SHOWN);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       };
 
       var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
       var scrollSize = "scroll" + capitalizedDimension;
       var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-<<<<<<< HEAD
-      $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-=======
       $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element.style[dimension] = this._element[scrollSize] + "px";
     };
 
     _proto.hide = function hide() {
       var _this2 = this;
 
-<<<<<<< HEAD
-      if (this._isTransitioning || !$(this._element).hasClass(ClassName$3.SHOW)) {
-        return;
-      }
-
-      var startEvent = $.Event(Event$3.HIDE);
-      $(this._element).trigger(startEvent);
-=======
       if (this._isTransitioning || !$__default['default'](this._element).hasClass(CLASS_NAME_SHOW$1)) {
         return;
       }
 
       var startEvent = $__default['default'].Event(EVENT_HIDE);
       $__default['default'](this._element).trigger(startEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (startEvent.isDefaultPrevented()) {
         return;
@@ -2011,11 +1346,7 @@
 
       this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
-<<<<<<< HEAD
-      $(this._element).addClass(ClassName$3.COLLAPSING).removeClass(ClassName$3.COLLAPSE).removeClass(ClassName$3.SHOW);
-=======
       $__default['default'](this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var triggerArrayLength = this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
@@ -2024,17 +1355,10 @@
           var selector = Util.getSelectorFromElement(trigger);
 
           if (selector !== null) {
-<<<<<<< HEAD
-            var $elem = $([].slice.call(document.querySelectorAll(selector)));
-
-            if (!$elem.hasClass(ClassName$3.SHOW)) {
-              $(trigger).addClass(ClassName$3.COLLAPSED).attr('aria-expanded', false);
-=======
             var $elem = $__default['default']([].slice.call(document.querySelectorAll(selector)));
 
             if (!$elem.hasClass(CLASS_NAME_SHOW$1)) {
               $__default['default'](trigger).addClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', false);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
             }
           }
         }
@@ -2045,20 +1369,12 @@
       var complete = function complete() {
         _this2.setTransitioning(false);
 
-<<<<<<< HEAD
-        $(_this2._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).trigger(Event$3.HIDDEN);
-=======
         $__default['default'](_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       };
 
       this._element.style[dimension] = '';
       var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-<<<<<<< HEAD
-      $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-=======
       $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     };
 
     _proto.setTransitioning = function setTransitioning(isTransitioning) {
@@ -2066,11 +1382,7 @@
     };
 
     _proto.dispose = function dispose() {
-<<<<<<< HEAD
-      $.removeData(this._element, DATA_KEY$3);
-=======
       $__default['default'].removeData(this._element, DATA_KEY$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._config = null;
       this._parent = null;
       this._element = null;
@@ -2080,11 +1392,7 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      config = _objectSpread({}, Default$1, config);
-=======
       config = _extends({}, Default$1, config);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME$3, config, DefaultType$1);
@@ -2092,13 +1400,8 @@
     };
 
     _proto._getDimension = function _getDimension() {
-<<<<<<< HEAD
-      var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
-      return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
-=======
       var hasWidth = $__default['default'](this._element).hasClass(DIMENSION_WIDTH);
       return hasWidth ? DIMENSION_WIDTH : DIMENSION_HEIGHT;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     };
 
     _proto._getParent = function _getParent() {
@@ -2118,28 +1421,17 @@
 
       var selector = "[data-toggle=\"collapse\"][data-parent=\"" + this._config.parent + "\"]";
       var children = [].slice.call(parent.querySelectorAll(selector));
-<<<<<<< HEAD
-      $(children).each(function (i, element) {
-=======
       $__default['default'](children).each(function (i, element) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         _this3._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
       });
       return parent;
     };
 
     _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
-<<<<<<< HEAD
-      var isOpen = $(element).hasClass(ClassName$3.SHOW);
-
-      if (triggerArray.length) {
-        $(triggerArray).toggleClass(ClassName$3.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
-=======
       var isOpen = $__default['default'](element).hasClass(CLASS_NAME_SHOW$1);
 
       if (triggerArray.length) {
         $__default['default'](triggerArray).toggleClass(CLASS_NAME_COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     } // Static
     ;
@@ -2151,31 +1443,18 @@
 
     Collapse._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var $this = $(this);
-        var data = $this.data(DATA_KEY$3);
-
-        var _config = _objectSpread({}, Default$1, $this.data(), typeof config === 'object' && config ? config : {});
-
-        if (!data && _config.toggle && /show|hide/.test(config)) {
-=======
         var $element = $__default['default'](this);
         var data = $element.data(DATA_KEY$3);
 
         var _config = _extends({}, Default$1, $element.data(), typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           _config.toggle = false;
         }
 
         if (!data) {
           data = new Collapse(this, _config);
-<<<<<<< HEAD
-          $this.data(DATA_KEY$3, data);
-=======
           $element.data(DATA_KEY$3, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'string') {
@@ -2209,29 +1488,17 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event$3.CLICK_DATA_API, Selector$3.DATA_TOGGLE, function (event) {
-=======
   $__default['default'](document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$1, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.currentTarget.tagName === 'A') {
       event.preventDefault();
     }
 
-<<<<<<< HEAD
-    var $trigger = $(this);
-    var selector = Util.getSelectorFromElement(this);
-    var selectors = [].slice.call(document.querySelectorAll(selector));
-    $(selectors).each(function () {
-      var $target = $(this);
-=======
     var $trigger = $__default['default'](this);
     var selector = Util.getSelectorFromElement(this);
     var selectors = [].slice.call(document.querySelectorAll(selector));
     $__default['default'](selectors).each(function () {
       var $target = $__default['default'](this);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var data = $target.data(DATA_KEY$3);
       var config = data ? 'toggle' : $trigger.data();
 
@@ -2244,29 +1511,17 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$3] = Collapse._jQueryInterface;
-  $.fn[NAME$3].Constructor = Collapse;
-
-  $.fn[NAME$3].noConflict = function () {
-    $.fn[NAME$3] = JQUERY_NO_CONFLICT$3;
-=======
   $__default['default'].fn[NAME$3] = Collapse._jQueryInterface;
   $__default['default'].fn[NAME$3].Constructor = Collapse;
 
   $__default['default'].fn[NAME$3].noConflict = function () {
     $__default['default'].fn[NAME$3] = JQUERY_NO_CONFLICT$3;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Collapse._jQueryInterface;
   };
 
   /**!
    * @fileOverview Kickass library to create and place poppers near their reference elements.
-<<<<<<< HEAD
-   * @version 1.14.7
-=======
    * @version 1.16.1
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
    * @license
    * Copyright (c) 2016 Federico Zivolo and contributors
    *
@@ -2288,18 +1543,6 @@
    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
    * SOFTWARE.
    */
-<<<<<<< HEAD
-  var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
-
-  var longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
-  var timeoutDuration = 0;
-  for (var i = 0; i < longerTimeoutBrowsers.length; i += 1) {
-    if (isBrowser && navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
-      timeoutDuration = 1;
-      break;
-    }
-  }
-=======
   var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined' && typeof navigator !== 'undefined';
 
   var timeoutDuration = function () {
@@ -2311,7 +1554,6 @@
     }
     return 0;
   }();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   function microtaskDebounce(fn) {
     var called = false;
@@ -2431,8 +1673,6 @@
     return getScrollParent(getParentNode(element));
   }
 
-<<<<<<< HEAD
-=======
   /**
    * Returns the reference node of the reference object, or the reference object itself.
    * @method
@@ -2444,7 +1684,6 @@
     return reference && reference.referenceNode ? reference.referenceNode : reference;
   }
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var isIE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
   var isIE10 = isBrowser && /MSIE 10/.test(navigator.userAgent);
 
@@ -2628,11 +1867,7 @@
     var sideA = axis === 'x' ? 'Left' : 'Top';
     var sideB = sideA === 'Left' ? 'Right' : 'Bottom';
 
-<<<<<<< HEAD
-    return parseFloat(styles['border' + sideA + 'Width'], 10) + parseFloat(styles['border' + sideB + 'Width'], 10);
-=======
     return parseFloat(styles['border' + sideA + 'Width']) + parseFloat(styles['border' + sideB + 'Width']);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   }
 
   function getSize(axis, body, html, computedStyle) {
@@ -2693,11 +1928,7 @@
     return obj;
   };
 
-<<<<<<< HEAD
-  var _extends = Object.assign || function (target) {
-=======
   var _extends$1 = Object.assign || function (target) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
@@ -2719,11 +1950,7 @@
    * @returns {Object} ClientRect like output
    */
   function getClientRect(offsets) {
-<<<<<<< HEAD
-    return _extends({}, offsets, {
-=======
     return _extends$1({}, offsets, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       right: offsets.left + offsets.width,
       bottom: offsets.top + offsets.height
     });
@@ -2765,13 +1992,8 @@
 
     // subtract scrollbar size from sizes
     var sizes = element.nodeName === 'HTML' ? getWindowSizes(element.ownerDocument) : {};
-<<<<<<< HEAD
-    var width = sizes.width || element.clientWidth || result.right - result.left;
-    var height = sizes.height || element.clientHeight || result.bottom - result.top;
-=======
     var width = sizes.width || element.clientWidth || result.width;
     var height = sizes.height || element.clientHeight || result.height;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     var horizScrollbar = element.offsetWidth - width;
     var vertScrollbar = element.offsetHeight - height;
@@ -2800,13 +2022,8 @@
     var scrollParent = getScrollParent(children);
 
     var styles = getStyleComputedProperty(parent);
-<<<<<<< HEAD
-    var borderTopWidth = parseFloat(styles.borderTopWidth, 10);
-    var borderLeftWidth = parseFloat(styles.borderLeftWidth, 10);
-=======
     var borderTopWidth = parseFloat(styles.borderTopWidth);
     var borderLeftWidth = parseFloat(styles.borderLeftWidth);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     // In cases where the parent is fixed, we must ignore negative scroll in offset calc
     if (fixedPosition && isHTML) {
@@ -2827,13 +2044,8 @@
     // differently when margins are applied to it. The margins are included in
     // the box of the documentElement, in the other cases not.
     if (!isIE10 && isHTML) {
-<<<<<<< HEAD
-      var marginTop = parseFloat(styles.marginTop, 10);
-      var marginLeft = parseFloat(styles.marginLeft, 10);
-=======
       var marginTop = parseFloat(styles.marginTop);
       var marginLeft = parseFloat(styles.marginLeft);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       offsets.top -= borderTopWidth - marginTop;
       offsets.bottom -= borderTopWidth - marginTop;
@@ -2933,11 +2145,7 @@
     // NOTE: 1 DOM access here
 
     var boundaries = { top: 0, left: 0 };
-<<<<<<< HEAD
-    var offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
-=======
     var offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, getReferenceNode(reference));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     // Handle viewport case
     if (boundariesElement === 'viewport') {
@@ -3030,11 +2238,7 @@
     };
 
     var sortedAreas = Object.keys(rects).map(function (key) {
-<<<<<<< HEAD
-      return _extends({
-=======
       return _extends$1({
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         key: key
       }, rects[key], {
         area: getArea(rects[key])
@@ -3069,11 +2273,7 @@
   function getReferenceOffsets(state, popper, reference) {
     var fixedPosition = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-<<<<<<< HEAD
-    var commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
-=======
     var commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, getReferenceNode(reference));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return getOffsetRectRelativeToArbitraryNode(reference, commonOffsetParent, fixedPosition);
   }
 
@@ -3335,11 +2535,7 @@
 
     this.disableEventListeners();
 
-<<<<<<< HEAD
-    // remove the popper if user explicity asked for the deletion on destroy
-=======
     // remove the popper if user explicitly asked for the deletion on destroy
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     // do not use `remove` because IE11 doesn't support it
     if (this.options.removeOnDestroy) {
       this.popper.parentNode.removeChild(this.popper);
@@ -3684,15 +2880,9 @@
     };
 
     // Update `data` attributes, styles and arrowStyles
-<<<<<<< HEAD
-    data.attributes = _extends({}, attributes, data.attributes);
-    data.styles = _extends({}, styles, data.styles);
-    data.arrowStyles = _extends({}, data.offsets.arrow, data.arrowStyles);
-=======
     data.attributes = _extends$1({}, attributes, data.attributes);
     data.styles = _extends$1({}, styles, data.styles);
     data.arrowStyles = _extends$1({}, data.offsets.arrow, data.arrowStyles);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     return data;
   }
@@ -3794,13 +2984,8 @@
     // Compute the sideValue using the updated popper offsets
     // take popper margin in account because we don't have this info available
     var css = getStyleComputedProperty(data.instance.popper);
-<<<<<<< HEAD
-    var popperMarginSide = parseFloat(css['margin' + sideCapitalized], 10);
-    var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width'], 10);
-=======
     var popperMarginSide = parseFloat(css['margin' + sideCapitalized]);
     var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width']);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     var sideValue = center - data.offsets.popper[side] - popperMarginSide - popperBorderSide;
 
     // prevent arrowElement from being placed not contiguously to its popper
@@ -3952,9 +3137,6 @@
 
       // flip the variation if required
       var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
-<<<<<<< HEAD
-      var flippedVariation = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
-=======
 
       // flips variation if reference element overflows boundaries
       var flippedVariationByRef = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
@@ -3963,7 +3145,6 @@
       var flippedVariationByContent = !!options.flipVariationsByContent && (isVertical && variation === 'start' && overflowsRight || isVertical && variation === 'end' && overflowsLeft || !isVertical && variation === 'start' && overflowsBottom || !isVertical && variation === 'end' && overflowsTop);
 
       var flippedVariation = flippedVariationByRef || flippedVariationByContent;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (overlapsRef || overflowsBoundaries || flippedVariation) {
         // this boolean to detect any flip loop
@@ -3981,11 +3162,7 @@
 
         // this object contains `position`, we want to preserve it along with
         // any additional property we may add in the future
-<<<<<<< HEAD
-        data.offsets.popper = _extends({}, data.offsets.popper, getPopperOffsets(data.instance.popper, data.offsets.reference, data.placement));
-=======
         data.offsets.popper = _extends$1({}, data.offsets.popper, getPopperOffsets(data.instance.popper, data.offsets.reference, data.placement));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         data = runModifiers(data.instance.modifiers, data, 'flip');
       }
@@ -4259,11 +3436,7 @@
 
     order.forEach(function (placement) {
       var side = ['left', 'top'].indexOf(placement) !== -1 ? 'primary' : 'secondary';
-<<<<<<< HEAD
-      popper = _extends({}, popper, check[side](placement));
-=======
       popper = _extends$1({}, popper, check[side](placement));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     });
 
     data.offsets.popper = popper;
@@ -4298,11 +3471,7 @@
         end: defineProperty({}, side, reference[side] + reference[measurement] - popper[measurement])
       };
 
-<<<<<<< HEAD
-      data.offsets.popper = _extends({}, popper, shiftOffsets[shiftvariation]);
-=======
       data.offsets.popper = _extends$1({}, popper, shiftOffsets[shiftvariation]);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     }
 
     return data;
@@ -4582,9 +3751,6 @@
        * The popper will never be placed outside of the defined boundaries
        * (except if `keepTogether` is enabled)
        */
-<<<<<<< HEAD
-      boundariesElement: 'viewport'
-=======
       boundariesElement: 'viewport',
       /**
        * @prop {Boolean} flipVariations=false
@@ -4602,7 +3768,6 @@
        * The original placement should have a set variation.
        */
       flipVariationsByContent: false
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     },
 
     /**
@@ -4819,13 +3984,8 @@
     /**
      * Creates a new Popper.js instance.
      * @class Popper
-<<<<<<< HEAD
-     * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
-     * @param {HTMLElement} popper - The HTML element used as the popper
-=======
      * @param {Element|referenceObject} reference - The reference element used to position the popper
      * @param {Element} popper - The HTML / XML element used as the popper
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
      * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
      * @return {Object} instance - The generated Popper.js instance
      */
@@ -4843,11 +4003,7 @@
       this.update = debounce(this.update.bind(this));
 
       // with {} we create a new object with the options inside it
-<<<<<<< HEAD
-      this.options = _extends({}, Popper.Defaults, options);
-=======
       this.options = _extends$1({}, Popper.Defaults, options);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       // init state
       this.state = {
@@ -4862,22 +4018,13 @@
 
       // Deep merge modifiers options
       this.options.modifiers = {};
-<<<<<<< HEAD
-      Object.keys(_extends({}, Popper.Defaults.modifiers, options.modifiers)).forEach(function (name) {
-        _this.options.modifiers[name] = _extends({}, Popper.Defaults.modifiers[name] || {}, options.modifiers ? options.modifiers[name] : {});
-=======
       Object.keys(_extends$1({}, Popper.Defaults.modifiers, options.modifiers)).forEach(function (name) {
         _this.options.modifiers[name] = _extends$1({}, Popper.Defaults.modifiers[name] || {}, options.modifiers ? options.modifiers[name] : {});
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       });
 
       // Refactoring modifiers' list (Object => Array)
       this.modifiers = Object.keys(this.options.modifiers).map(function (name) {
-<<<<<<< HEAD
-        return _extends({
-=======
         return _extends$1({
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           name: name
         }, _this.options.modifiers[name]);
       })
@@ -4993,19 +4140,11 @@
    */
 
   var NAME$4 = 'dropdown';
-<<<<<<< HEAD
-  var VERSION$4 = '4.3.1';
-  var DATA_KEY$4 = 'bs.dropdown';
-  var EVENT_KEY$4 = "." + DATA_KEY$4;
-  var DATA_API_KEY$4 = '.data-api';
-  var JQUERY_NO_CONFLICT$4 = $.fn[NAME$4];
-=======
   var VERSION$4 = '4.5.3';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
   var JQUERY_NO_CONFLICT$4 = $__default['default'].fn[NAME$4];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
 
   var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
@@ -5019,45 +4158,6 @@
   var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 
   var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
-<<<<<<< HEAD
-  var Event$4 = {
-    HIDE: "hide" + EVENT_KEY$4,
-    HIDDEN: "hidden" + EVENT_KEY$4,
-    SHOW: "show" + EVENT_KEY$4,
-    SHOWN: "shown" + EVENT_KEY$4,
-    CLICK: "click" + EVENT_KEY$4,
-    CLICK_DATA_API: "click" + EVENT_KEY$4 + DATA_API_KEY$4,
-    KEYDOWN_DATA_API: "keydown" + EVENT_KEY$4 + DATA_API_KEY$4,
-    KEYUP_DATA_API: "keyup" + EVENT_KEY$4 + DATA_API_KEY$4
-  };
-  var ClassName$4 = {
-    DISABLED: 'disabled',
-    SHOW: 'show',
-    DROPUP: 'dropup',
-    DROPRIGHT: 'dropright',
-    DROPLEFT: 'dropleft',
-    MENURIGHT: 'dropdown-menu-right',
-    MENULEFT: 'dropdown-menu-left',
-    POSITION_STATIC: 'position-static'
-  };
-  var Selector$4 = {
-    DATA_TOGGLE: '[data-toggle="dropdown"]',
-    FORM_CHILD: '.dropdown form',
-    MENU: '.dropdown-menu',
-    NAVBAR_NAV: '.navbar-nav',
-    VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
-  };
-  var AttachmentMap = {
-    TOP: 'top-start',
-    TOPEND: 'top-end',
-    BOTTOM: 'bottom-start',
-    BOTTOMEND: 'bottom-end',
-    RIGHT: 'right-start',
-    RIGHTEND: 'right-end',
-    LEFT: 'left-start',
-    LEFTEND: 'left-end'
-  };
-=======
   var EVENT_HIDE$1 = "hide" + EVENT_KEY$4;
   var EVENT_HIDDEN$1 = "hidden" + EVENT_KEY$4;
   var EVENT_SHOW$1 = "show" + EVENT_KEY$4;
@@ -5084,38 +4184,19 @@
   var PLACEMENT_BOTTOMEND = 'bottom-end';
   var PLACEMENT_RIGHT = 'right-start';
   var PLACEMENT_LEFT = 'left-start';
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var Default$2 = {
     offset: 0,
     flip: true,
     boundary: 'scrollParent',
     reference: 'toggle',
-<<<<<<< HEAD
-    display: 'dynamic'
-=======
     display: 'dynamic',
     popperConfig: null
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   };
   var DefaultType$2 = {
     offset: '(number|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
     reference: '(string|element)',
-<<<<<<< HEAD
-    display: 'string'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Dropdown =
-  /*#__PURE__*/
-  function () {
-=======
     display: 'string',
     popperConfig: '(null|object)'
   };
@@ -5126,7 +4207,6 @@
    */
 
   var Dropdown = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function Dropdown(element, config) {
       this._element = element;
       this._popper = null;
@@ -5142,21 +4222,11 @@
 
     // Public
     _proto.toggle = function toggle() {
-<<<<<<< HEAD
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED)) {
-        return;
-      }
-
-      var parent = Dropdown._getParentFromElement(this._element);
-
-      var isActive = $(this._menu).hasClass(ClassName$4.SHOW);
-=======
       if (this._element.disabled || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED)) {
         return;
       }
 
       var isActive = $__default['default'](this._menu).hasClass(CLASS_NAME_SHOW$2);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       Dropdown._clearMenus();
 
@@ -5164,13 +4234,6 @@
         return;
       }
 
-<<<<<<< HEAD
-      var relatedTarget = {
-        relatedTarget: this._element
-      };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
-      $(parent).trigger(showEvent);
-=======
       this.show(true);
     };
 
@@ -5191,18 +4254,13 @@
       var parent = Dropdown._getParentFromElement(this._element);
 
       $__default['default'](parent).trigger(showEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (showEvent.isDefaultPrevented()) {
         return;
       } // Disable totally Popper.js for Dropdown in Navbar
 
 
-<<<<<<< HEAD
-      if (!this._inNavbar) {
-=======
       if (!this._inNavbar && usePopper) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         /**
          * Check for Popper dependency
          * Popper - https://popper.js.org
@@ -5227,11 +4285,7 @@
 
 
         if (this._config.boundary !== 'scrollParent') {
-<<<<<<< HEAD
-          $(parent).addClass(ClassName$4.POSITION_STATIC);
-=======
           $__default['default'](parent).addClass(CLASS_NAME_POSITION_STATIC);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
@@ -5241,89 +4295,36 @@
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-<<<<<<< HEAD
-      if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length === 0) {
-        $(document.body).children().on('mouseover', null, $.noop);
-=======
       if ('ontouchstart' in document.documentElement && $__default['default'](parent).closest(SELECTOR_NAVBAR_NAV).length === 0) {
         $__default['default'](document.body).children().on('mouseover', null, $__default['default'].noop);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       this._element.focus();
 
       this._element.setAttribute('aria-expanded', true);
 
-<<<<<<< HEAD
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
-    };
-
-    _proto.show = function show() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
-        return;
-      }
-
-      var relatedTarget = {
-        relatedTarget: this._element
-      };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
-
-      var parent = Dropdown._getParentFromElement(this._element);
-
-      $(parent).trigger(showEvent);
-
-      if (showEvent.isDefaultPrevented()) {
-        return;
-      }
-
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
-    };
-
-    _proto.hide = function hide() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || !$(this._menu).hasClass(ClassName$4.SHOW)) {
-=======
       $__default['default'](this._menu).toggleClass(CLASS_NAME_SHOW$2);
       $__default['default'](parent).toggleClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_SHOWN$1, relatedTarget));
     };
 
     _proto.hide = function hide() {
       if (this._element.disabled || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED) || !$__default['default'](this._menu).hasClass(CLASS_NAME_SHOW$2)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this._element
       };
-<<<<<<< HEAD
-      var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
-
-      var parent = Dropdown._getParentFromElement(this._element);
-
-      $(parent).trigger(hideEvent);
-=======
       var hideEvent = $__default['default'].Event(EVENT_HIDE$1, relatedTarget);
 
       var parent = Dropdown._getParentFromElement(this._element);
 
       $__default['default'](parent).trigger(hideEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (hideEvent.isDefaultPrevented()) {
         return;
       }
 
-<<<<<<< HEAD
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
-    };
-
-    _proto.dispose = function dispose() {
-      $.removeData(this._element, DATA_KEY$4);
-      $(this._element).off(EVENT_KEY$4);
-=======
       if (this._popper) {
         this._popper.destroy();
       }
@@ -5335,7 +4336,6 @@
     _proto.dispose = function dispose() {
       $__default['default'].removeData(this._element, DATA_KEY$4);
       $__default['default'](this._element).off(EVENT_KEY$4);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element = null;
       this._menu = null;
 
@@ -5358,11 +4358,7 @@
     _proto._addEventListeners = function _addEventListeners() {
       var _this = this;
 
-<<<<<<< HEAD
-      $(this._element).on(Event$4.CLICK, function (event) {
-=======
       $__default['default'](this._element).on(EVENT_CLICK, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         event.preventDefault();
         event.stopPropagation();
 
@@ -5371,11 +4367,7 @@
     };
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      config = _objectSpread({}, this.constructor.Default, $(this._element).data(), config);
-=======
       config = _extends({}, this.constructor.Default, $__default['default'](this._element).data(), config);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
       return config;
     };
@@ -5385,11 +4377,7 @@
         var parent = Dropdown._getParentFromElement(this._element);
 
         if (parent) {
-<<<<<<< HEAD
-          this._menu = parent.querySelector(Selector$4.MENU);
-=======
           this._menu = parent.querySelector(SELECTOR_MENU);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
       }
 
@@ -5397,23 +4385,6 @@
     };
 
     _proto._getPlacement = function _getPlacement() {
-<<<<<<< HEAD
-      var $parentDropdown = $(this._element.parentNode);
-      var placement = AttachmentMap.BOTTOM; // Handle dropup
-
-      if ($parentDropdown.hasClass(ClassName$4.DROPUP)) {
-        placement = AttachmentMap.TOP;
-
-        if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-          placement = AttachmentMap.TOPEND;
-        }
-      } else if ($parentDropdown.hasClass(ClassName$4.DROPRIGHT)) {
-        placement = AttachmentMap.RIGHT;
-      } else if ($parentDropdown.hasClass(ClassName$4.DROPLEFT)) {
-        placement = AttachmentMap.LEFT;
-      } else if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-        placement = AttachmentMap.BOTTOMEND;
-=======
       var $parentDropdown = $__default['default'](this._element.parentNode);
       var placement = PLACEMENT_BOTTOM; // Handle dropup
 
@@ -5425,18 +4396,13 @@
         placement = PLACEMENT_LEFT;
       } else if ($__default['default'](this._menu).hasClass(CLASS_NAME_MENURIGHT)) {
         placement = PLACEMENT_BOTTOMEND;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       return placement;
     };
 
     _proto._detectNavbar = function _detectNavbar() {
-<<<<<<< HEAD
-      return $(this._element).closest('.navbar').length > 0;
-=======
       return $__default['default'](this._element).closest('.navbar').length > 0;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     };
 
     _proto._getOffset = function _getOffset() {
@@ -5446,11 +4412,7 @@
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-<<<<<<< HEAD
-          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
-=======
           data.offsets = _extends({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return data;
         };
       } else {
@@ -5471,14 +4433,8 @@
           preventOverflow: {
             boundariesElement: this._config.boundary
           }
-<<<<<<< HEAD
-        } // Disable Popper.js if we have a static display
-
-      };
-=======
         }
       }; // Disable Popper.js if we have a static display
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (this._config.display === 'static') {
         popperConfig.modifiers.applyStyle = {
@@ -5486,31 +4442,19 @@
         };
       }
 
-<<<<<<< HEAD
-      return popperConfig;
-=======
       return _extends({}, popperConfig, this._config.popperConfig);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     } // Static
     ;
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var data = $(this).data(DATA_KEY$4);
-=======
         var data = $__default['default'](this).data(DATA_KEY$4);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         var _config = typeof config === 'object' ? config : null;
 
         if (!data) {
           data = new Dropdown(this, _config);
-<<<<<<< HEAD
-          $(this).data(DATA_KEY$4, data);
-=======
           $__default['default'](this).data(DATA_KEY$4, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'string') {
@@ -5528,20 +4472,12 @@
         return;
       }
 
-<<<<<<< HEAD
-      var toggles = [].slice.call(document.querySelectorAll(Selector$4.DATA_TOGGLE));
-=======
       var toggles = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$2));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       for (var i = 0, len = toggles.length; i < len; i++) {
         var parent = Dropdown._getParentFromElement(toggles[i]);
 
-<<<<<<< HEAD
-        var context = $(toggles[i]).data(DATA_KEY$4);
-=======
         var context = $__default['default'](toggles[i]).data(DATA_KEY$4);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         var relatedTarget = {
           relatedTarget: toggles[i]
         };
@@ -5556,18 +4492,6 @@
 
         var dropdownMenu = context._menu;
 
-<<<<<<< HEAD
-        if (!$(parent).hasClass(ClassName$4.SHOW)) {
-          continue;
-        }
-
-        if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && $.contains(parent, event.target)) {
-          continue;
-        }
-
-        var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
-        $(parent).trigger(hideEvent);
-=======
         if (!$__default['default'](parent).hasClass(CLASS_NAME_SHOW$2)) {
           continue;
         }
@@ -5578,7 +4502,6 @@
 
         var hideEvent = $__default['default'].Event(EVENT_HIDE$1, relatedTarget);
         $__default['default'](parent).trigger(hideEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         if (hideEvent.isDefaultPrevented()) {
           continue;
@@ -5587,14 +4510,6 @@
 
 
         if ('ontouchstart' in document.documentElement) {
-<<<<<<< HEAD
-          $(document.body).children().off('mouseover', null, $.noop);
-        }
-
-        toggles[i].setAttribute('aria-expanded', 'false');
-        $(dropdownMenu).removeClass(ClassName$4.SHOW);
-        $(parent).removeClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
-=======
           $__default['default'](document.body).children().off('mouseover', null, $__default['default'].noop);
         }
 
@@ -5606,7 +4521,6 @@
 
         $__default['default'](dropdownMenu).removeClass(CLASS_NAME_SHOW$2);
         $__default['default'](parent).removeClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_HIDDEN$1, relatedTarget));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
@@ -5630,42 +4544,16 @@
       //  - If key is other than escape
       //    - If key is not up or down => not a dropdown command
       //    - If trigger inside the menu => not a dropdown command
-<<<<<<< HEAD
-      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $(event.target).closest(Selector$4.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
-        return;
-      }
-
-      event.preventDefault();
-      event.stopPropagation();
-
-      if (this.disabled || $(this).hasClass(ClassName$4.DISABLED)) {
-=======
       if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $__default['default'](event.target).closest(SELECTOR_MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
         return;
       }
 
       if (this.disabled || $__default['default'](this).hasClass(CLASS_NAME_DISABLED)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return;
       }
 
       var parent = Dropdown._getParentFromElement(this);
 
-<<<<<<< HEAD
-      var isActive = $(parent).hasClass(ClassName$4.SHOW);
-
-      if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
-        if (event.which === ESCAPE_KEYCODE) {
-          var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
-          $(toggle).trigger('focus');
-        }
-
-        $(this).trigger('click');
-        return;
-      }
-
-      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS));
-=======
       var isActive = $__default['default'](parent).hasClass(CLASS_NAME_SHOW$2);
 
       if (!isActive && event.which === ESCAPE_KEYCODE) {
@@ -5687,7 +4575,6 @@
       var items = [].slice.call(parent.querySelectorAll(SELECTOR_VISIBLE_ITEMS)).filter(function (item) {
         return $__default['default'](item).is(':visible');
       });
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (items.length === 0) {
         return;
@@ -5738,21 +4625,12 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event$4.KEYDOWN_DATA_API, Selector$4.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event$4.KEYDOWN_DATA_API, Selector$4.MENU, Dropdown._dataApiKeydownHandler).on(Event$4.CLICK_DATA_API + " " + Event$4.KEYUP_DATA_API, Dropdown._clearMenus).on(Event$4.CLICK_DATA_API, Selector$4.DATA_TOGGLE, function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    Dropdown._jQueryInterface.call($(this), 'toggle');
-  }).on(Event$4.CLICK_DATA_API, Selector$4.FORM_CHILD, function (e) {
-=======
   $__default['default'](document).on(EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown._dataApiKeydownHandler).on(EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown._dataApiKeydownHandler).on(EVENT_CLICK_DATA_API$4 + " " + EVENT_KEYUP_DATA_API, Dropdown._clearMenus).on(EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$2, function (event) {
     event.preventDefault();
     event.stopPropagation();
 
     Dropdown._jQueryInterface.call($__default['default'](this), 'toggle');
   }).on(EVENT_CLICK_DATA_API$4, SELECTOR_FORM_CHILD, function (e) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     e.stopPropagation();
   });
   /**
@@ -5761,19 +4639,11 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$4] = Dropdown._jQueryInterface;
-  $.fn[NAME$4].Constructor = Dropdown;
-
-  $.fn[NAME$4].noConflict = function () {
-    $.fn[NAME$4] = JQUERY_NO_CONFLICT$4;
-=======
   $__default['default'].fn[NAME$4] = Dropdown._jQueryInterface;
   $__default['default'].fn[NAME$4].Constructor = Dropdown;
 
   $__default['default'].fn[NAME$4].noConflict = function () {
     $__default['default'].fn[NAME$4] = JQUERY_NO_CONFLICT$4;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Dropdown._jQueryInterface;
   };
 
@@ -5784,19 +4654,11 @@
    */
 
   var NAME$5 = 'modal';
-<<<<<<< HEAD
-  var VERSION$5 = '4.3.1';
-  var DATA_KEY$5 = 'bs.modal';
-  var EVENT_KEY$5 = "." + DATA_KEY$5;
-  var DATA_API_KEY$5 = '.data-api';
-  var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
-=======
   var VERSION$5 = '4.5.3';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
   var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var ESCAPE_KEYCODE$1 = 27; // KeyboardEvent.which value for Escape (Esc) key
 
   var Default$3 = {
@@ -5811,51 +4673,6 @@
     focus: 'boolean',
     show: 'boolean'
   };
-<<<<<<< HEAD
-  var Event$5 = {
-    HIDE: "hide" + EVENT_KEY$5,
-    HIDDEN: "hidden" + EVENT_KEY$5,
-    SHOW: "show" + EVENT_KEY$5,
-    SHOWN: "shown" + EVENT_KEY$5,
-    FOCUSIN: "focusin" + EVENT_KEY$5,
-    RESIZE: "resize" + EVENT_KEY$5,
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY$5,
-    KEYDOWN_DISMISS: "keydown.dismiss" + EVENT_KEY$5,
-    MOUSEUP_DISMISS: "mouseup.dismiss" + EVENT_KEY$5,
-    MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY$5,
-    CLICK_DATA_API: "click" + EVENT_KEY$5 + DATA_API_KEY$5
-  };
-  var ClassName$5 = {
-    SCROLLABLE: 'modal-dialog-scrollable',
-    SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-    BACKDROP: 'modal-backdrop',
-    OPEN: 'modal-open',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$5 = {
-    DIALOG: '.modal-dialog',
-    MODAL_BODY: '.modal-body',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
-    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-    STICKY_CONTENT: '.sticky-top'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Modal =
-  /*#__PURE__*/
-  function () {
-    function Modal(element, config) {
-      this._config = this._getConfig(config);
-      this._element = element;
-      this._dialog = element.querySelector(Selector$5.DIALOG);
-=======
   var EVENT_HIDE$2 = "hide" + EVENT_KEY$5;
   var EVENT_HIDE_PREVENTED = "hidePrevented" + EVENT_KEY$5;
   var EVENT_HIDDEN$2 = "hidden" + EVENT_KEY$5;
@@ -5892,7 +4709,6 @@
       this._config = this._getConfig(config);
       this._element = element;
       this._dialog = element.querySelector(SELECTOR_DIALOG);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._backdrop = null;
       this._isShown = false;
       this._isBodyOverflowing = false;
@@ -5916,16 +4732,6 @@
         return;
       }
 
-<<<<<<< HEAD
-      if ($(this._element).hasClass(ClassName$5.FADE)) {
-        this._isTransitioning = true;
-      }
-
-      var showEvent = $.Event(Event$5.SHOW, {
-        relatedTarget: relatedTarget
-      });
-      $(this._element).trigger(showEvent);
-=======
       if ($__default['default'](this._element).hasClass(CLASS_NAME_FADE$1)) {
         this._isTransitioning = true;
       }
@@ -5934,7 +4740,6 @@
         relatedTarget: relatedTarget
       });
       $__default['default'](this._element).trigger(showEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (this._isShown || showEvent.isDefaultPrevented()) {
         return;
@@ -5952,21 +4757,12 @@
 
       this._setResizeEvent();
 
-<<<<<<< HEAD
-      $(this._element).on(Event$5.CLICK_DISMISS, Selector$5.DATA_DISMISS, function (event) {
-        return _this.hide(event);
-      });
-      $(this._dialog).on(Event$5.MOUSEDOWN_DISMISS, function () {
-        $(_this._element).one(Event$5.MOUSEUP_DISMISS, function (event) {
-          if ($(event.target).is(_this._element)) {
-=======
       $__default['default'](this._element).on(EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, function (event) {
         return _this.hide(event);
       });
       $__default['default'](this._dialog).on(EVENT_MOUSEDOWN_DISMISS, function () {
         $__default['default'](_this._element).one(EVENT_MOUSEUP_DISMISS, function (event) {
           if ($__default['default'](event.target).is(_this._element)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
             _this._ignoreBackdropClick = true;
           }
         });
@@ -5988,24 +4784,15 @@
         return;
       }
 
-<<<<<<< HEAD
-      var hideEvent = $.Event(Event$5.HIDE);
-      $(this._element).trigger(hideEvent);
-=======
       var hideEvent = $__default['default'].Event(EVENT_HIDE$2);
       $__default['default'](this._element).trigger(hideEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (!this._isShown || hideEvent.isDefaultPrevented()) {
         return;
       }
 
       this._isShown = false;
-<<<<<<< HEAD
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
-=======
       var transition = $__default['default'](this._element).hasClass(CLASS_NAME_FADE$1);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (transition) {
         this._isTransitioning = true;
@@ -6015,16 +4802,6 @@
 
       this._setResizeEvent();
 
-<<<<<<< HEAD
-      $(document).off(Event$5.FOCUSIN);
-      $(this._element).removeClass(ClassName$5.SHOW);
-      $(this._element).off(Event$5.CLICK_DISMISS);
-      $(this._dialog).off(Event$5.MOUSEDOWN_DISMISS);
-
-      if (transition) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $(this._element).one(Util.TRANSITION_END, function (event) {
-=======
       $__default['default'](document).off(EVENT_FOCUSIN);
       $__default['default'](this._element).removeClass(CLASS_NAME_SHOW$3);
       $__default['default'](this._element).off(EVENT_CLICK_DISMISS);
@@ -6033,7 +4810,6 @@
       if (transition) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
         $__default['default'](this._element).one(Util.TRANSITION_END, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return _this2._hideModal(event);
         }).emulateTransitionEnd(transitionDuration);
       } else {
@@ -6043,18 +4819,6 @@
 
     _proto.dispose = function dispose() {
       [window, this._element, this._dialog].forEach(function (htmlElement) {
-<<<<<<< HEAD
-        return $(htmlElement).off(EVENT_KEY$5);
-      });
-      /**
-       * `document` has 2 events `Event.FOCUSIN` and `Event.CLICK_DATA_API`
-       * Do not move `document` in `htmlElements` array
-       * It will remove `Event.CLICK_DATA_API` event that should remain
-       */
-
-      $(document).off(Event$5.FOCUSIN);
-      $.removeData(this._element, DATA_KEY$5);
-=======
         return $__default['default'](htmlElement).off(EVENT_KEY$5);
       });
       /**
@@ -6065,7 +4829,6 @@
 
       $__default['default'](document).off(EVENT_FOCUSIN);
       $__default['default'].removeData(this._element, DATA_KEY$5);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._config = null;
       this._element = null;
       this._dialog = null;
@@ -6083,21 +4846,11 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      config = _objectSpread({}, Default$3, config);
-=======
       config = _extends({}, Default$3, config);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
 
-<<<<<<< HEAD
-    _proto._showElement = function _showElement(relatedTarget) {
-      var _this3 = this;
-
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
-=======
     _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
       var _this3 = this;
 
@@ -6140,7 +4893,6 @@
 
       var transition = $__default['default'](this._element).hasClass(CLASS_NAME_FADE$1);
       var modalBody = this._dialog ? this._dialog.querySelector(SELECTOR_MODAL_BODY) : null;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
@@ -6153,15 +4905,10 @@
 
       this._element.setAttribute('aria-modal', true);
 
-<<<<<<< HEAD
-      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE)) {
-        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop = 0;
-=======
       this._element.setAttribute('role', 'dialog');
 
       if ($__default['default'](this._dialog).hasClass(CLASS_NAME_SCROLLABLE) && modalBody) {
         modalBody.scrollTop = 0;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       } else {
         this._element.scrollTop = 0;
       }
@@ -6170,89 +4917,45 @@
         Util.reflow(this._element);
       }
 
-<<<<<<< HEAD
-      $(this._element).addClass(ClassName$5.SHOW);
-=======
       $__default['default'](this._element).addClass(CLASS_NAME_SHOW$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (this._config.focus) {
         this._enforceFocus();
       }
 
-<<<<<<< HEAD
-      var shownEvent = $.Event(Event$5.SHOWN, {
-=======
       var shownEvent = $__default['default'].Event(EVENT_SHOWN$2, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         relatedTarget: relatedTarget
       });
 
       var transitionComplete = function transitionComplete() {
-<<<<<<< HEAD
-        if (_this3._config.focus) {
-          _this3._element.focus();
-        }
-
-        _this3._isTransitioning = false;
-        $(_this3._element).trigger(shownEvent);
-=======
         if (_this4._config.focus) {
           _this4._element.focus();
         }
 
         _this4._isTransitioning = false;
         $__default['default'](_this4._element).trigger(shownEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       };
 
       if (transition) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._dialog);
-<<<<<<< HEAD
-        $(this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(transitionDuration);
-=======
         $__default['default'](this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       } else {
         transitionComplete();
       }
     };
 
     _proto._enforceFocus = function _enforceFocus() {
-<<<<<<< HEAD
-      var _this4 = this;
-
-      $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
-      .on(Event$5.FOCUSIN, function (event) {
-        if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
-          _this4._element.focus();
-=======
       var _this5 = this;
 
       $__default['default'](document).off(EVENT_FOCUSIN) // Guard against infinite focus loop
       .on(EVENT_FOCUSIN, function (event) {
         if (document !== event.target && _this5._element !== event.target && $__default['default'](_this5._element).has(event.target).length === 0) {
           _this5._element.focus();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
       });
     };
 
     _proto._setEscapeEvent = function _setEscapeEvent() {
-<<<<<<< HEAD
-      var _this5 = this;
-
-      if (this._isShown && this._config.keyboard) {
-        $(this._element).on(Event$5.KEYDOWN_DISMISS, function (event) {
-          if (event.which === ESCAPE_KEYCODE$1) {
-            event.preventDefault();
-
-            _this5.hide();
-          }
-        });
-      } else if (!this._isShown) {
-        $(this._element).off(Event$5.KEYDOWN_DISMISS);
-=======
       var _this6 = this;
 
       if (this._isShown) {
@@ -6267,21 +4970,10 @@
         });
       } else if (!this._isShown) {
         $__default['default'](this._element).off(EVENT_KEYDOWN_DISMISS);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
     _proto._setResizeEvent = function _setResizeEvent() {
-<<<<<<< HEAD
-      var _this6 = this;
-
-      if (this._isShown) {
-        $(window).on(Event$5.RESIZE, function (event) {
-          return _this6.handleUpdate(event);
-        });
-      } else {
-        $(window).off(Event$5.RESIZE);
-=======
       var _this7 = this;
 
       if (this._isShown) {
@@ -6290,16 +4982,11 @@
         });
       } else {
         $__default['default'](window).off(EVENT_RESIZE);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     };
 
     _proto._hideModal = function _hideModal() {
-<<<<<<< HEAD
-      var _this7 = this;
-=======
       var _this8 = this;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       this._element.style.display = 'none';
 
@@ -6307,18 +4994,6 @@
 
       this._element.removeAttribute('aria-modal');
 
-<<<<<<< HEAD
-      this._isTransitioning = false;
-
-      this._showBackdrop(function () {
-        $(document.body).removeClass(ClassName$5.OPEN);
-
-        _this7._resetAdjustments();
-
-        _this7._resetScrollbar();
-
-        $(_this7._element).trigger(Event$5.HIDDEN);
-=======
       this._element.removeAttribute('role');
 
       this._isTransitioning = false;
@@ -6331,31 +5006,17 @@
         _this8._resetScrollbar();
 
         $__default['default'](_this8._element).trigger(EVENT_HIDDEN$2);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       });
     };
 
     _proto._removeBackdrop = function _removeBackdrop() {
       if (this._backdrop) {
-<<<<<<< HEAD
-        $(this._backdrop).remove();
-=======
         $__default['default'](this._backdrop).remove();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         this._backdrop = null;
       }
     };
 
     _proto._showBackdrop = function _showBackdrop(callback) {
-<<<<<<< HEAD
-      var _this8 = this;
-
-      var animate = $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
-
-      if (this._isShown && this._config.backdrop) {
-        this._backdrop = document.createElement('div');
-        this._backdrop.className = ClassName$5.BACKDROP;
-=======
       var _this9 = this;
 
       var animate = $__default['default'](this._element).hasClass(CLASS_NAME_FADE$1) ? CLASS_NAME_FADE$1 : '';
@@ -6363,23 +5024,15 @@
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
         this._backdrop.className = CLASS_NAME_BACKDROP;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         if (animate) {
           this._backdrop.classList.add(animate);
         }
 
-<<<<<<< HEAD
-        $(this._backdrop).appendTo(document.body);
-        $(this._element).on(Event$5.CLICK_DISMISS, function (event) {
-          if (_this8._ignoreBackdropClick) {
-            _this8._ignoreBackdropClick = false;
-=======
         $__default['default'](this._backdrop).appendTo(document.body);
         $__default['default'](this._element).on(EVENT_CLICK_DISMISS, function (event) {
           if (_this9._ignoreBackdropClick) {
             _this9._ignoreBackdropClick = false;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
             return;
           }
 
@@ -6387,26 +5040,14 @@
             return;
           }
 
-<<<<<<< HEAD
-          if (_this8._config.backdrop === 'static') {
-            _this8._element.focus();
-          } else {
-            _this8.hide();
-          }
-=======
           _this9._triggerBackdropTransition();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         });
 
         if (animate) {
           Util.reflow(this._backdrop);
         }
 
-<<<<<<< HEAD
-        $(this._backdrop).addClass(ClassName$5.SHOW);
-=======
         $__default['default'](this._backdrop).addClass(CLASS_NAME_SHOW$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         if (!callback) {
           return;
@@ -6418,38 +5059,22 @@
         }
 
         var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
-<<<<<<< HEAD
-        $(this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
-      } else if (!this._isShown && this._backdrop) {
-        $(this._backdrop).removeClass(ClassName$5.SHOW);
-
-        var callbackRemove = function callbackRemove() {
-          _this8._removeBackdrop();
-=======
         $__default['default'](this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
         $__default['default'](this._backdrop).removeClass(CLASS_NAME_SHOW$3);
 
         var callbackRemove = function callbackRemove() {
           _this9._removeBackdrop();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
           if (callback) {
             callback();
           }
         };
 
-<<<<<<< HEAD
-        if ($(this._element).hasClass(ClassName$5.FADE)) {
-          var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
-
-          $(this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
-=======
         if ($__default['default'](this._element).hasClass(CLASS_NAME_FADE$1)) {
           var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
 
           $__default['default'](this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         } else {
           callbackRemove();
         }
@@ -6481,47 +5106,16 @@
 
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
-<<<<<<< HEAD
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
-=======
       this._isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 
     _proto._setScrollbar = function _setScrollbar() {
-<<<<<<< HEAD
-      var _this9 = this;
-=======
       var _this10 = this;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-<<<<<<< HEAD
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-        var stickyContent = [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
-
-        $(fixedContent).each(function (index, element) {
-          var actualPadding = element.style.paddingRight;
-          var calculatedPadding = $(element).css('padding-right');
-          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
-        }); // Adjust sticky content margin
-
-        $(stickyContent).each(function (index, element) {
-          var actualMargin = element.style.marginRight;
-          var calculatedMargin = $(element).css('margin-right');
-          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
-        }); // Adjust body padding
-
-        var actualPadding = document.body.style.paddingRight;
-        var calculatedPadding = $(document.body).css('padding-right');
-        $(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
-      }
-
-      $(document.body).addClass(ClassName$5.OPEN);
-=======
         var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
         var stickyContent = [].slice.call(document.querySelectorAll(SELECTOR_STICKY_CONTENT)); // Adjust fixed content padding
 
@@ -6543,31 +5137,10 @@
       }
 
       $__default['default'](document.body).addClass(CLASS_NAME_OPEN);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     };
 
     _proto._resetScrollbar = function _resetScrollbar() {
       // Restore fixed content padding
-<<<<<<< HEAD
-      var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-      $(fixedContent).each(function (index, element) {
-        var padding = $(element).data('padding-right');
-        $(element).removeData('padding-right');
-        element.style.paddingRight = padding ? padding : '';
-      }); // Restore sticky content
-
-      var elements = [].slice.call(document.querySelectorAll("" + Selector$5.STICKY_CONTENT));
-      $(elements).each(function (index, element) {
-        var margin = $(element).data('margin-right');
-
-        if (typeof margin !== 'undefined') {
-          $(element).css('margin-right', margin).removeData('margin-right');
-        }
-      }); // Restore body padding
-
-      var padding = $(document.body).data('padding-right');
-      $(document.body).removeData('padding-right');
-=======
       var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
       $__default['default'](fixedContent).each(function (index, element) {
         var padding = $__default['default'](element).data('padding-right');
@@ -6586,18 +5159,13 @@
 
       var padding = $__default['default'](document.body).data('padding-right');
       $__default['default'](document.body).removeData('padding-right');
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       document.body.style.paddingRight = padding ? padding : '';
     };
 
     _proto._getScrollbarWidth = function _getScrollbarWidth() {
       // thx d.walsh
       var scrollDiv = document.createElement('div');
-<<<<<<< HEAD
-      scrollDiv.className = ClassName$5.SCROLLBAR_MEASURER;
-=======
       scrollDiv.className = CLASS_NAME_SCROLLBAR_MEASURER;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       document.body.appendChild(scrollDiv);
       var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
@@ -6607,15 +5175,6 @@
 
     Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
       return this.each(function () {
-<<<<<<< HEAD
-        var data = $(this).data(DATA_KEY$5);
-
-        var _config = _objectSpread({}, Default$3, $(this).data(), typeof config === 'object' && config ? config : {});
-
-        if (!data) {
-          data = new Modal(this, _config);
-          $(this).data(DATA_KEY$5, data);
-=======
         var data = $__default['default'](this).data(DATA_KEY$5);
 
         var _config = _extends({}, Default$3, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
@@ -6623,7 +5182,6 @@
         if (!data) {
           data = new Modal(this, _config);
           $__default['default'](this).data(DATA_KEY$5, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'string') {
@@ -6659,13 +5217,8 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event$5.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
-    var _this10 = this;
-=======
   $__default['default'](document).on(EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE$3, function (event) {
     var _this11 = this;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     var target;
     var selector = Util.getSelectorFromElement(this);
@@ -6674,44 +5227,26 @@
       target = document.querySelector(selector);
     }
 
-<<<<<<< HEAD
-    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread({}, $(target).data(), $(this).data());
-=======
     var config = $__default['default'](target).data(DATA_KEY$5) ? 'toggle' : _extends({}, $__default['default'](target).data(), $__default['default'](this).data());
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
     }
 
-<<<<<<< HEAD
-    var $target = $(target).one(Event$5.SHOW, function (showEvent) {
-=======
     var $target = $__default['default'](target).one(EVENT_SHOW$2, function (showEvent) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       if (showEvent.isDefaultPrevented()) {
         // Only register focus restorer if modal will actually get shown
         return;
       }
 
-<<<<<<< HEAD
-      $target.one(Event$5.HIDDEN, function () {
-        if ($(_this10).is(':visible')) {
-          _this10.focus();
-=======
       $target.one(EVENT_HIDDEN$2, function () {
         if ($__default['default'](_this11).is(':visible')) {
           _this11.focus();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
       });
     });
 
-<<<<<<< HEAD
-    Modal._jQueryInterface.call($(target), config, this);
-=======
     Modal._jQueryInterface.call($__default['default'](target), config, this);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   });
   /**
    * ------------------------------------------------------------------------
@@ -6719,31 +5254,18 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$5] = Modal._jQueryInterface;
-  $.fn[NAME$5].Constructor = Modal;
-
-  $.fn[NAME$5].noConflict = function () {
-    $.fn[NAME$5] = JQUERY_NO_CONFLICT$5;
-=======
   $__default['default'].fn[NAME$5] = Modal._jQueryInterface;
   $__default['default'].fn[NAME$5].Constructor = Modal;
 
   $__default['default'].fn[NAME$5].noConflict = function () {
     $__default['default'].fn[NAME$5] = JQUERY_NO_CONFLICT$5;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Modal._jQueryInterface;
   };
 
   /**
    * --------------------------------------------------------------------------
-<<<<<<< HEAD
-   * Bootstrap (v4.3.1): tools/sanitizer.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-=======
    * Bootstrap (v4.5.3): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
    * --------------------------------------------------------------------------
    */
   var uriAttrs = ['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'];
@@ -6767,11 +5289,7 @@
     h5: [],
     h6: [],
     i: [],
-<<<<<<< HEAD
-    img: ['src', 'alt', 'title', 'width', 'height'],
-=======
     img: ['src', 'srcset', 'alt', 'title', 'width', 'height'],
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     li: [],
     ol: [],
     p: [],
@@ -6784,16 +5302,6 @@
     strong: [],
     u: [],
     ul: []
-<<<<<<< HEAD
-    /**
-     * A pattern that recognizes a commonly useful subset of URLs that are safe.
-     *
-     * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
-     */
-
-  };
-  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
-=======
   };
   /**
    * A pattern that recognizes a commonly useful subset of URLs that are safe.
@@ -6802,18 +5310,13 @@
    */
 
   var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/gi;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
    * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-<<<<<<< HEAD
-  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
-=======
   var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   function allowedAttribute(attr, allowedAttributeList) {
     var attrName = attr.nodeName.toLowerCase();
@@ -6830,11 +5333,7 @@
       return attrRegex instanceof RegExp;
     }); // Check if a regular expression validates the attribute.
 
-<<<<<<< HEAD
-    for (var i = 0, l = regExp.length; i < l; i++) {
-=======
     for (var i = 0, len = regExp.length; i < len; i++) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       if (attrName.match(regExp[i])) {
         return true;
       }
@@ -6876,11 +5375,7 @@
     };
 
     for (var i = 0, len = elements.length; i < len; i++) {
-<<<<<<< HEAD
-      var _ret = _loop(i, len);
-=======
       var _ret = _loop(i);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (_ret === "continue") continue;
     }
@@ -6895,17 +5390,10 @@
    */
 
   var NAME$6 = 'tooltip';
-<<<<<<< HEAD
-  var VERSION$6 = '4.3.1';
-  var DATA_KEY$6 = 'bs.tooltip';
-  var EVENT_KEY$6 = "." + DATA_KEY$6;
-  var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
-=======
   var VERSION$6 = '4.5.3';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $__default['default'].fn[NAME$6];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var CLASS_PREFIX = 'bs-tooltip';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
   var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
@@ -6924,16 +5412,10 @@
     boundary: '(string|element)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
-<<<<<<< HEAD
-    whiteList: 'object'
-  };
-  var AttachmentMap$1 = {
-=======
     whiteList: 'object',
     popperConfig: '(null|object)'
   };
   var AttachmentMap = {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     AUTO: 'auto',
     TOP: 'top',
     RIGHT: 'right',
@@ -6955,22 +5437,12 @@
     boundary: 'scrollParent',
     sanitize: true,
     sanitizeFn: null,
-<<<<<<< HEAD
-    whiteList: DefaultWhitelist
-  };
-  var HoverState = {
-    SHOW: 'show',
-    OUT: 'out'
-  };
-  var Event$6 = {
-=======
     whiteList: DefaultWhitelist,
     popperConfig: null
   };
   var HOVER_STATE_SHOW = 'show';
   var HOVER_STATE_OUT = 'out';
   var Event = {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     HIDE: "hide" + EVENT_KEY$6,
     HIDDEN: "hidden" + EVENT_KEY$6,
     SHOW: "show" + EVENT_KEY$6,
@@ -6982,38 +5454,6 @@
     MOUSEENTER: "mouseenter" + EVENT_KEY$6,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$6
   };
-<<<<<<< HEAD
-  var ClassName$6 = {
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$6 = {
-    TOOLTIP: '.tooltip',
-    TOOLTIP_INNER: '.tooltip-inner',
-    ARROW: '.arrow'
-  };
-  var Trigger = {
-    HOVER: 'hover',
-    FOCUS: 'focus',
-    CLICK: 'click',
-    MANUAL: 'manual'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Tooltip =
-  /*#__PURE__*/
-  function () {
-    function Tooltip(element, config) {
-      /**
-       * Check for Popper dependency
-       * Popper - https://popper.js.org
-       */
-=======
   var CLASS_NAME_FADE$2 = 'fade';
   var CLASS_NAME_SHOW$4 = 'show';
   var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
@@ -7030,7 +5470,6 @@
 
   var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
@@ -7072,19 +5511,11 @@
 
       if (event) {
         var dataKey = this.constructor.DATA_KEY;
-<<<<<<< HEAD
-        var context = $(event.currentTarget).data(dataKey);
-
-        if (!context) {
-          context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-          $(event.currentTarget).data(dataKey, context);
-=======
         var context = $__default['default'](event.currentTarget).data(dataKey);
 
         if (!context) {
           context = new this.constructor(event.currentTarget, this._getDelegateConfig());
           $__default['default'](event.currentTarget).data(dataKey, context);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         context._activeTrigger.click = !context._activeTrigger.click;
@@ -7095,11 +5526,7 @@
           context._leave(null, context);
         }
       } else {
-<<<<<<< HEAD
-        if ($(this.getTipElement()).hasClass(ClassName$6.SHOW)) {
-=======
         if ($__default['default'](this.getTipElement()).hasClass(CLASS_NAME_SHOW$4)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           this._leave(null, this);
 
           return;
@@ -7111,21 +5538,12 @@
 
     _proto.dispose = function dispose() {
       clearTimeout(this._timeout);
-<<<<<<< HEAD
-      $.removeData(this.element, this.constructor.DATA_KEY);
-      $(this.element).off(this.constructor.EVENT_KEY);
-      $(this.element).closest('.modal').off('hide.bs.modal');
-
-      if (this.tip) {
-        $(this.tip).remove();
-=======
       $__default['default'].removeData(this.element, this.constructor.DATA_KEY);
       $__default['default'](this.element).off(this.constructor.EVENT_KEY);
       $__default['default'](this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
 
       if (this.tip) {
         $__default['default'](this.tip).remove();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       this._isEnabled = null;
@@ -7133,11 +5551,7 @@
       this._hoverState = null;
       this._activeTrigger = null;
 
-<<<<<<< HEAD
-      if (this._popper !== null) {
-=======
       if (this._popper) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         this._popper.destroy();
       }
 
@@ -7150,18 +5564,6 @@
     _proto.show = function show() {
       var _this = this;
 
-<<<<<<< HEAD
-      if ($(this.element).css('display') === 'none') {
-        throw new Error('Please use show on visible elements');
-      }
-
-      var showEvent = $.Event(this.constructor.Event.SHOW);
-
-      if (this.isWithContent() && this._isEnabled) {
-        $(this.element).trigger(showEvent);
-        var shadowRoot = Util.findShadowRoot(this.element);
-        var isInTheDom = $.contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
-=======
       if ($__default['default'](this.element).css('display') === 'none') {
         throw new Error('Please use show on visible elements');
       }
@@ -7172,7 +5574,6 @@
         $__default['default'](this.element).trigger(showEvent);
         var shadowRoot = Util.findShadowRoot(this.element);
         var isInTheDom = $__default['default'].contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         if (showEvent.isDefaultPrevented() || !isInTheDom) {
           return;
@@ -7185,11 +5586,7 @@
         this.setContent();
 
         if (this.config.animation) {
-<<<<<<< HEAD
-          $(tip).addClass(ClassName$6.FADE);
-=======
           $__default['default'](tip).addClass(CLASS_NAME_FADE$2);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
@@ -7200,39 +5597,6 @@
 
         var container = this._getContainer();
 
-<<<<<<< HEAD
-        $(tip).data(this.constructor.DATA_KEY, this);
-
-        if (!$.contains(this.element.ownerDocument.documentElement, this.tip)) {
-          $(tip).appendTo(container);
-        }
-
-        $(this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper(this.element, tip, {
-          placement: attachment,
-          modifiers: {
-            offset: this._getOffset(),
-            flip: {
-              behavior: this.config.fallbackPlacement
-            },
-            arrow: {
-              element: Selector$6.ARROW
-            },
-            preventOverflow: {
-              boundariesElement: this.config.boundary
-            }
-          },
-          onCreate: function onCreate(data) {
-            if (data.originalPlacement !== data.placement) {
-              _this._handlePopperPlacementChange(data);
-            }
-          },
-          onUpdate: function onUpdate(data) {
-            return _this._handlePopperPlacementChange(data);
-          }
-        });
-        $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
-=======
         $__default['default'](tip).data(this.constructor.DATA_KEY, this);
 
         if (!$__default['default'].contains(this.element.ownerDocument.documentElement, this.tip)) {
@@ -7242,17 +5606,12 @@
         $__default['default'](this.element).trigger(this.constructor.Event.INSERTED);
         this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
         $__default['default'](tip).addClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we add extra
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
         if ('ontouchstart' in document.documentElement) {
-<<<<<<< HEAD
-          $(document.body).children().on('mouseover', null, $.noop);
-=======
           $__default['default'](document.body).children().on('mouseover', null, $__default['default'].noop);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         var complete = function complete() {
@@ -7262,28 +5621,16 @@
 
           var prevHoverState = _this._hoverState;
           _this._hoverState = null;
-<<<<<<< HEAD
-          $(_this.element).trigger(_this.constructor.Event.SHOWN);
-
-          if (prevHoverState === HoverState.OUT) {
-=======
           $__default['default'](_this.element).trigger(_this.constructor.Event.SHOWN);
 
           if (prevHoverState === HOVER_STATE_OUT) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
             _this._leave(null, _this);
           }
         };
 
-<<<<<<< HEAD
-        if ($(this.tip).hasClass(ClassName$6.FADE)) {
-          var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
-          $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-=======
         if ($__default['default'](this.tip).hasClass(CLASS_NAME_FADE$2)) {
           var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
           $__default['default'](this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         } else {
           complete();
         }
@@ -7294,17 +5641,10 @@
       var _this2 = this;
 
       var tip = this.getTipElement();
-<<<<<<< HEAD
-      var hideEvent = $.Event(this.constructor.Event.HIDE);
-
-      var complete = function complete() {
-        if (_this2._hoverState !== HoverState.SHOW && tip.parentNode) {
-=======
       var hideEvent = $__default['default'].Event(this.constructor.Event.HIDE);
 
       var complete = function complete() {
         if (_this2._hoverState !== HOVER_STATE_SHOW && tip.parentNode) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           tip.parentNode.removeChild(tip);
         }
 
@@ -7312,11 +5652,7 @@
 
         _this2.element.removeAttribute('aria-describedby');
 
-<<<<<<< HEAD
-        $(_this2.element).trigger(_this2.constructor.Event.HIDDEN);
-=======
         $__default['default'](_this2.element).trigger(_this2.constructor.Event.HIDDEN);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         if (_this2._popper !== null) {
           _this2._popper.destroy();
@@ -7327,32 +5663,12 @@
         }
       };
 
-<<<<<<< HEAD
-      $(this.element).trigger(hideEvent);
-=======
       $__default['default'](this.element).trigger(hideEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (hideEvent.isDefaultPrevented()) {
         return;
       }
 
-<<<<<<< HEAD
-      $(tip).removeClass(ClassName$6.SHOW); // If this is a touch-enabled device we remove the extra
-      // empty mouseover listeners we added for iOS support
-
-      if ('ontouchstart' in document.documentElement) {
-        $(document.body).children().off('mouseover', null, $.noop);
-      }
-
-      this._activeTrigger[Trigger.CLICK] = false;
-      this._activeTrigger[Trigger.FOCUS] = false;
-      this._activeTrigger[Trigger.HOVER] = false;
-
-      if ($(this.tip).hasClass(ClassName$6.FADE)) {
-        var transitionDuration = Util.getTransitionDurationFromElement(tip);
-        $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-=======
       $__default['default'](tip).removeClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
@@ -7367,7 +5683,6 @@
       if ($__default['default'](this.tip).hasClass(CLASS_NAME_FADE$2)) {
         var transitionDuration = Util.getTransitionDurationFromElement(tip);
         $__default['default'](tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       } else {
         complete();
       }
@@ -7387,50 +5702,29 @@
     };
 
     _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-<<<<<<< HEAD
-      $(this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
-    };
-
-    _proto.getTipElement = function getTipElement() {
-      this.tip = this.tip || $(this.config.template)[0];
-=======
       $__default['default'](this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
     };
 
     _proto.getTipElement = function getTipElement() {
       this.tip = this.tip || $__default['default'](this.config.template)[0];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       return this.tip;
     };
 
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
-<<<<<<< HEAD
-      this.setElementContent($(tip.querySelectorAll(Selector$6.TOOLTIP_INNER)), this.getTitle());
-      $(tip).removeClass(ClassName$6.FADE + " " + ClassName$6.SHOW);
-=======
       this.setElementContent($__default['default'](tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
       $__default['default'](tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
       if (typeof content === 'object' && (content.nodeType || content.jquery)) {
         // Content is a DOM node or a jQuery
         if (this.config.html) {
-<<<<<<< HEAD
-          if (!$(content).parent().is($element)) {
-            $element.empty().append(content);
-          }
-        } else {
-          $element.text($(content).text());
-=======
           if (!$__default['default'](content).parent().is($element)) {
             $element.empty().append(content);
           }
         } else {
           $element.text($__default['default'](content).text());
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         return;
@@ -7458,11 +5752,6 @@
     } // Private
     ;
 
-<<<<<<< HEAD
-    _proto._getOffset = function _getOffset() {
-      var _this3 = this;
-
-=======
     _proto._getPopperConfig = function _getPopperConfig(attachment) {
       var _this3 = this;
 
@@ -7495,16 +5784,11 @@
     _proto._getOffset = function _getOffset() {
       var _this4 = this;
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var offset = {};
 
       if (typeof this.config.offset === 'function') {
         offset.fn = function (data) {
-<<<<<<< HEAD
-          data.offsets = _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
-=======
           data.offsets = _extends({}, data.offsets, _this4.config.offset(data.offsets, _this4.element) || {});
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           return data;
         };
       } else {
@@ -7520,20 +5804,6 @@
       }
 
       if (Util.isElement(this.config.container)) {
-<<<<<<< HEAD
-        return $(this.config.container);
-      }
-
-      return $(document).find(this.config.container);
-    };
-
-    _proto._getAttachment = function _getAttachment(placement) {
-      return AttachmentMap$1[placement.toUpperCase()];
-    };
-
-    _proto._setListeners = function _setListeners() {
-      var _this4 = this;
-=======
         return $__default['default'](this.config.container);
       }
 
@@ -7546,34 +5816,10 @@
 
     _proto._setListeners = function _setListeners() {
       var _this5 = this;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-<<<<<<< HEAD
-          $(_this4.element).on(_this4.constructor.Event.CLICK, _this4.config.selector, function (event) {
-            return _this4.toggle(event);
-          });
-        } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
-          $(_this4.element).on(eventIn, _this4.config.selector, function (event) {
-            return _this4._enter(event);
-          }).on(eventOut, _this4.config.selector, function (event) {
-            return _this4._leave(event);
-          });
-        }
-      });
-      $(this.element).closest('.modal').on('hide.bs.modal', function () {
-        if (_this4.element) {
-          _this4.hide();
-        }
-      });
-
-      if (this.config.selector) {
-        this.config = _objectSpread({}, this.config, {
-=======
           $__default['default'](_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
             return _this5.toggle(event);
           });
@@ -7598,7 +5844,6 @@
 
       if (this.config.selector) {
         this.config = _extends({}, this.config, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           trigger: 'manual',
           selector: ''
         });
@@ -7618,21 +5863,6 @@
 
     _proto._enter = function _enter(event, context) {
       var dataKey = this.constructor.DATA_KEY;
-<<<<<<< HEAD
-      context = context || $(event.currentTarget).data(dataKey);
-
-      if (!context) {
-        context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-        $(event.currentTarget).data(dataKey, context);
-      }
-
-      if (event) {
-        context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
-      }
-
-      if ($(context.getTipElement()).hasClass(ClassName$6.SHOW) || context._hoverState === HoverState.SHOW) {
-        context._hoverState = HoverState.SHOW;
-=======
       context = context || $__default['default'](event.currentTarget).data(dataKey);
 
       if (!context) {
@@ -7646,16 +5876,11 @@
 
       if ($__default['default'](context.getTipElement()).hasClass(CLASS_NAME_SHOW$4) || context._hoverState === HOVER_STATE_SHOW) {
         context._hoverState = HOVER_STATE_SHOW;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return;
       }
 
       clearTimeout(context._timeout);
-<<<<<<< HEAD
-      context._hoverState = HoverState.SHOW;
-=======
       context._hoverState = HOVER_STATE_SHOW;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (!context.config.delay || !context.config.delay.show) {
         context.show();
@@ -7663,11 +5888,7 @@
       }
 
       context._timeout = setTimeout(function () {
-<<<<<<< HEAD
-        if (context._hoverState === HoverState.SHOW) {
-=======
         if (context._hoverState === HOVER_STATE_SHOW) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           context.show();
         }
       }, context.config.delay.show);
@@ -7675,17 +5896,6 @@
 
     _proto._leave = function _leave(event, context) {
       var dataKey = this.constructor.DATA_KEY;
-<<<<<<< HEAD
-      context = context || $(event.currentTarget).data(dataKey);
-
-      if (!context) {
-        context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-        $(event.currentTarget).data(dataKey, context);
-      }
-
-      if (event) {
-        context._activeTrigger[event.type === 'focusout' ? Trigger.FOCUS : Trigger.HOVER] = false;
-=======
       context = context || $__default['default'](event.currentTarget).data(dataKey);
 
       if (!context) {
@@ -7695,7 +5905,6 @@
 
       if (event) {
         context._activeTrigger[event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER] = false;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
 
       if (context._isWithActiveTrigger()) {
@@ -7703,11 +5912,7 @@
       }
 
       clearTimeout(context._timeout);
-<<<<<<< HEAD
-      context._hoverState = HoverState.OUT;
-=======
       context._hoverState = HOVER_STATE_OUT;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (!context.config.delay || !context.config.delay.hide) {
         context.hide();
@@ -7715,11 +5920,7 @@
       }
 
       context._timeout = setTimeout(function () {
-<<<<<<< HEAD
-        if (context._hoverState === HoverState.OUT) {
-=======
         if (context._hoverState === HOVER_STATE_OUT) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           context.hide();
         }
       }, context.config.delay.hide);
@@ -7736,21 +5937,13 @@
     };
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      var dataAttributes = $(this.element).data();
-=======
       var dataAttributes = $__default['default'](this.element).data();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       Object.keys(dataAttributes).forEach(function (dataAttr) {
         if (DISALLOWED_ATTRIBUTES.indexOf(dataAttr) !== -1) {
           delete dataAttributes[dataAttr];
         }
       });
-<<<<<<< HEAD
-      config = _objectSpread({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
-=======
       config = _extends({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -7791,11 +5984,7 @@
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
-<<<<<<< HEAD
-      var $tip = $(this.getTipElement());
-=======
       var $tip = $__default['default'](this.getTipElement());
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
 
       if (tabClass !== null && tabClass.length) {
@@ -7804,12 +5993,7 @@
     };
 
     _proto._handlePopperPlacementChange = function _handlePopperPlacementChange(popperData) {
-<<<<<<< HEAD
-      var popperInstance = popperData.instance;
-      this.tip = popperInstance.popper;
-=======
       this.tip = popperData.instance.popper;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       this._cleanTipClass();
 
@@ -7824,11 +6008,7 @@
         return;
       }
 
-<<<<<<< HEAD
-      $(tip).removeClass(ClassName$6.FADE);
-=======
       $__default['default'](tip).removeClass(CLASS_NAME_FADE$2);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this.config.animation = false;
       this.hide();
       this.show();
@@ -7838,12 +6018,8 @@
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var data = $(this).data(DATA_KEY$6);
-=======
         var $element = $__default['default'](this);
         var data = $element.data(DATA_KEY$6);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         var _config = typeof config === 'object' && config;
 
@@ -7853,11 +6029,7 @@
 
         if (!data) {
           data = new Tooltip(this, _config);
-<<<<<<< HEAD
-          $(this).data(DATA_KEY$6, data);
-=======
           $element.data(DATA_KEY$6, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'string') {
@@ -7893,11 +6065,7 @@
     }, {
       key: "Event",
       get: function get() {
-<<<<<<< HEAD
-        return Event$6;
-=======
         return Event;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     }, {
       key: "EVENT_KEY",
@@ -7920,19 +6088,11 @@
    */
 
 
-<<<<<<< HEAD
-  $.fn[NAME$6] = Tooltip._jQueryInterface;
-  $.fn[NAME$6].Constructor = Tooltip;
-
-  $.fn[NAME$6].noConflict = function () {
-    $.fn[NAME$6] = JQUERY_NO_CONFLICT$6;
-=======
   $__default['default'].fn[NAME$6] = Tooltip._jQueryInterface;
   $__default['default'].fn[NAME$6].Constructor = Tooltip;
 
   $__default['default'].fn[NAME$6].noConflict = function () {
     $__default['default'].fn[NAME$6] = JQUERY_NO_CONFLICT$6;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Tooltip._jQueryInterface;
   };
 
@@ -7943,16 +6103,6 @@
    */
 
   var NAME$7 = 'popover';
-<<<<<<< HEAD
-  var VERSION$7 = '4.3.1';
-  var DATA_KEY$7 = 'bs.popover';
-  var EVENT_KEY$7 = "." + DATA_KEY$7;
-  var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
-  var CLASS_PREFIX$1 = 'bs-popover';
-  var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
-
-  var Default$5 = _objectSpread({}, Tooltip.Default, {
-=======
   var VERSION$7 = '4.5.3';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
@@ -7961,28 +6111,12 @@
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
   var Default$5 = _extends({}, Tooltip.Default, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-<<<<<<< HEAD
-  var DefaultType$5 = _objectSpread({}, Tooltip.DefaultType, {
-    content: '(string|element|function)'
-  });
-
-  var ClassName$7 = {
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$7 = {
-    TITLE: '.popover-header',
-    CONTENT: '.popover-body'
-  };
-  var Event$7 = {
-=======
   var DefaultType$5 = _extends({}, Tooltip.DefaultType, {
     content: '(string|element|function)'
   });
@@ -7992,7 +6126,6 @@
   var SELECTOR_TITLE = '.popover-header';
   var SELECTOR_CONTENT = '.popover-body';
   var Event$1 = {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     HIDE: "hide" + EVENT_KEY$7,
     HIDDEN: "hidden" + EVENT_KEY$7,
     SHOW: "show" + EVENT_KEY$7,
@@ -8003,19 +6136,6 @@
     FOCUSOUT: "focusout" + EVENT_KEY$7,
     MOUSEENTER: "mouseenter" + EVENT_KEY$7,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$7
-<<<<<<< HEAD
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Popover =
-  /*#__PURE__*/
-  function (_Tooltip) {
-=======
   };
   /**
    * ------------------------------------------------------------------------
@@ -8024,7 +6144,6 @@
    */
 
   var Popover = /*#__PURE__*/function (_Tooltip) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     _inheritsLoose(Popover, _Tooltip);
 
     function Popover() {
@@ -8039,32 +6158,18 @@
     };
 
     _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-<<<<<<< HEAD
-      $(this.getTipElement()).addClass(CLASS_PREFIX$1 + "-" + attachment);
-    };
-
-    _proto.getTipElement = function getTipElement() {
-      this.tip = this.tip || $(this.config.template)[0];
-=======
       $__default['default'](this.getTipElement()).addClass(CLASS_PREFIX$1 + "-" + attachment);
     };
 
     _proto.getTipElement = function getTipElement() {
       this.tip = this.tip || $__default['default'](this.config.template)[0];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       return this.tip;
     };
 
     _proto.setContent = function setContent() {
-<<<<<<< HEAD
-      var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
-
-      this.setElementContent($tip.find(Selector$7.TITLE), this.getTitle());
-=======
       var $tip = $__default['default'](this.getTipElement()); // We use append for html objects to maintain js events
 
       this.setElementContent($tip.find(SELECTOR_TITLE), this.getTitle());
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var content = this._getContent();
 
@@ -8072,13 +6177,8 @@
         content = content.call(this.element);
       }
 
-<<<<<<< HEAD
-      this.setElementContent($tip.find(Selector$7.CONTENT), content);
-      $tip.removeClass(ClassName$7.FADE + " " + ClassName$7.SHOW);
-=======
       this.setElementContent($tip.find(SELECTOR_CONTENT), content);
       $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     } // Private
     ;
 
@@ -8087,11 +6187,7 @@
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
-<<<<<<< HEAD
-      var $tip = $(this.getTipElement());
-=======
       var $tip = $__default['default'](this.getTipElement());
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
 
       if (tabClass !== null && tabClass.length > 0) {
@@ -8102,11 +6198,7 @@
 
     Popover._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var data = $(this).data(DATA_KEY$7);
-=======
         var data = $__default['default'](this).data(DATA_KEY$7);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         var _config = typeof config === 'object' ? config : null;
 
@@ -8116,11 +6208,7 @@
 
         if (!data) {
           data = new Popover(this, _config);
-<<<<<<< HEAD
-          $(this).data(DATA_KEY$7, data);
-=======
           $__default['default'](this).data(DATA_KEY$7, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'string') {
@@ -8157,11 +6245,7 @@
     }, {
       key: "Event",
       get: function get() {
-<<<<<<< HEAD
-        return Event$7;
-=======
         return Event$1;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       }
     }, {
       key: "EVENT_KEY",
@@ -8184,19 +6268,11 @@
    */
 
 
-<<<<<<< HEAD
-  $.fn[NAME$7] = Popover._jQueryInterface;
-  $.fn[NAME$7].Constructor = Popover;
-
-  $.fn[NAME$7].noConflict = function () {
-    $.fn[NAME$7] = JQUERY_NO_CONFLICT$7;
-=======
   $__default['default'].fn[NAME$7] = Popover._jQueryInterface;
   $__default['default'].fn[NAME$7].Constructor = Popover;
 
   $__default['default'].fn[NAME$7].noConflict = function () {
     $__default['default'].fn[NAME$7] = JQUERY_NO_CONFLICT$7;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Popover._jQueryInterface;
   };
 
@@ -8207,19 +6283,11 @@
    */
 
   var NAME$8 = 'scrollspy';
-<<<<<<< HEAD
-  var VERSION$8 = '4.3.1';
-  var DATA_KEY$8 = 'bs.scrollspy';
-  var EVENT_KEY$8 = "." + DATA_KEY$8;
-  var DATA_API_KEY$6 = '.data-api';
-  var JQUERY_NO_CONFLICT$8 = $.fn[NAME$8];
-=======
   var VERSION$8 = '4.5.3';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
   var JQUERY_NO_CONFLICT$8 = $__default['default'].fn[NAME$8];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var Default$6 = {
     offset: 10,
     method: 'auto',
@@ -8230,43 +6298,6 @@
     method: 'string',
     target: '(string|element)'
   };
-<<<<<<< HEAD
-  var Event$8 = {
-    ACTIVATE: "activate" + EVENT_KEY$8,
-    SCROLL: "scroll" + EVENT_KEY$8,
-    LOAD_DATA_API: "load" + EVENT_KEY$8 + DATA_API_KEY$6
-  };
-  var ClassName$8 = {
-    DROPDOWN_ITEM: 'dropdown-item',
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active'
-  };
-  var Selector$8 = {
-    DATA_SPY: '[data-spy="scroll"]',
-    ACTIVE: '.active',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    NAV_LINKS: '.nav-link',
-    NAV_ITEMS: '.nav-item',
-    LIST_ITEMS: '.list-group-item',
-    DROPDOWN: '.dropdown',
-    DROPDOWN_ITEMS: '.dropdown-item',
-    DROPDOWN_TOGGLE: '.dropdown-toggle'
-  };
-  var OffsetMethod = {
-    OFFSET: 'offset',
-    POSITION: 'position'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var ScrollSpy =
-  /*#__PURE__*/
-  function () {
-=======
   var EVENT_ACTIVATE = "activate" + EVENT_KEY$8;
   var EVENT_SCROLL = "scroll" + EVENT_KEY$8;
   var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$8 + DATA_API_KEY$6;
@@ -8289,27 +6320,18 @@
    */
 
   var ScrollSpy = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function ScrollSpy(element, config) {
       var _this = this;
 
       this._element = element;
       this._scrollElement = element.tagName === 'BODY' ? window : element;
       this._config = this._getConfig(config);
-<<<<<<< HEAD
-      this._selector = this._config.target + " " + Selector$8.NAV_LINKS + "," + (this._config.target + " " + Selector$8.LIST_ITEMS + ",") + (this._config.target + " " + Selector$8.DROPDOWN_ITEMS);
-=======
       this._selector = this._config.target + " " + SELECTOR_NAV_LINKS + "," + (this._config.target + " " + SELECTOR_LIST_ITEMS + ",") + (this._config.target + " " + SELECTOR_DROPDOWN_ITEMS);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._offsets = [];
       this._targets = [];
       this._activeTarget = null;
       this._scrollHeight = 0;
-<<<<<<< HEAD
-      $(this._scrollElement).on(Event$8.SCROLL, function (event) {
-=======
       $__default['default'](this._scrollElement).on(EVENT_SCROLL, function (event) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return _this._process(event);
       });
       this.refresh();
@@ -8324,15 +6346,9 @@
     _proto.refresh = function refresh() {
       var _this2 = this;
 
-<<<<<<< HEAD
-      var autoMethod = this._scrollElement === this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
-      var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
-      var offsetBase = offsetMethod === OffsetMethod.POSITION ? this._getScrollTop() : 0;
-=======
       var autoMethod = this._scrollElement === this._scrollElement.window ? METHOD_OFFSET : METHOD_POSITION;
       var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
       var offsetBase = offsetMethod === METHOD_POSITION ? this._getScrollTop() : 0;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._offsets = [];
       this._targets = [];
       this._scrollHeight = this._getScrollHeight();
@@ -8350,11 +6366,7 @@
 
           if (targetBCR.width || targetBCR.height) {
             // TODO (fat): remove sketch reliance on jQuery position/offset
-<<<<<<< HEAD
-            return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
-=======
             return [$__default['default'](target)[offsetMethod]().top + offsetBase, targetSelector];
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
           }
         }
 
@@ -8371,13 +6383,8 @@
     };
 
     _proto.dispose = function dispose() {
-<<<<<<< HEAD
-      $.removeData(this._element, DATA_KEY$8);
-      $(this._scrollElement).off(EVENT_KEY$8);
-=======
       $__default['default'].removeData(this._element, DATA_KEY$8);
       $__default['default'](this._scrollElement).off(EVENT_KEY$8);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element = null;
       this._scrollElement = null;
       this._config = null;
@@ -8390,16 +6397,6 @@
     ;
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      config = _objectSpread({}, Default$6, typeof config === 'object' && config ? config : {});
-
-      if (typeof config.target !== 'string') {
-        var id = $(config.target).attr('id');
-
-        if (!id) {
-          id = Util.getUID(NAME$8);
-          $(config.target).attr('id', id);
-=======
       config = _extends({}, Default$6, typeof config === 'object' && config ? config : {});
 
       if (typeof config.target !== 'string' && Util.isElement(config.target)) {
@@ -8408,7 +6405,6 @@
         if (!id) {
           id = Util.getUID(NAME$8);
           $__default['default'](config.target).attr('id', id);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         config.target = "#" + id;
@@ -8459,13 +6455,7 @@
         return;
       }
 
-<<<<<<< HEAD
-      var offsetLength = this._offsets.length;
-
-      for (var i = offsetLength; i--;) {
-=======
       for (var i = this._offsets.length; i--;) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
 
         if (isActiveTarget) {
@@ -8483,24 +6473,6 @@
         return selector + "[data-target=\"" + target + "\"]," + selector + "[href=\"" + target + "\"]";
       });
 
-<<<<<<< HEAD
-      var $link = $([].slice.call(document.querySelectorAll(queries.join(','))));
-
-      if ($link.hasClass(ClassName$8.DROPDOWN_ITEM)) {
-        $link.closest(Selector$8.DROPDOWN).find(Selector$8.DROPDOWN_TOGGLE).addClass(ClassName$8.ACTIVE);
-        $link.addClass(ClassName$8.ACTIVE);
-      } else {
-        // Set triggered link as active
-        $link.addClass(ClassName$8.ACTIVE); // Set triggered links parents as active
-        // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_LINKS + ", " + Selector$8.LIST_ITEMS).addClass(ClassName$8.ACTIVE); // Handle special case when .nav-link is inside .nav-item
-
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_ITEMS).children(Selector$8.NAV_LINKS).addClass(ClassName$8.ACTIVE);
-      }
-
-      $(this._scrollElement).trigger(Event$8.ACTIVATE, {
-=======
       var $link = $__default['default']([].slice.call(document.querySelectorAll(queries.join(','))));
 
       if ($link.hasClass(CLASS_NAME_DROPDOWN_ITEM)) {
@@ -8517,43 +6489,28 @@
       }
 
       $__default['default'](this._scrollElement).trigger(EVENT_ACTIVATE, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         relatedTarget: target
       });
     };
 
     _proto._clear = function _clear() {
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
-<<<<<<< HEAD
-        return node.classList.contains(ClassName$8.ACTIVE);
-      }).forEach(function (node) {
-        return node.classList.remove(ClassName$8.ACTIVE);
-=======
         return node.classList.contains(CLASS_NAME_ACTIVE$2);
       }).forEach(function (node) {
         return node.classList.remove(CLASS_NAME_ACTIVE$2);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       });
     } // Static
     ;
 
     ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var data = $(this).data(DATA_KEY$8);
-=======
         var data = $__default['default'](this).data(DATA_KEY$8);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
         var _config = typeof config === 'object' && config;
 
         if (!data) {
           data = new ScrollSpy(this, _config);
-<<<<<<< HEAD
-          $(this).data(DATA_KEY$8, data);
-=======
           $__default['default'](this).data(DATA_KEY$8, data);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (typeof config === 'string') {
@@ -8587,21 +6544,12 @@
    */
 
 
-<<<<<<< HEAD
-  $(window).on(Event$8.LOAD_DATA_API, function () {
-    var scrollSpys = [].slice.call(document.querySelectorAll(Selector$8.DATA_SPY));
-    var scrollSpysLength = scrollSpys.length;
-
-    for (var i = scrollSpysLength; i--;) {
-      var $spy = $(scrollSpys[i]);
-=======
   $__default['default'](window).on(EVENT_LOAD_DATA_API$2, function () {
     var scrollSpys = [].slice.call(document.querySelectorAll(SELECTOR_DATA_SPY));
     var scrollSpysLength = scrollSpys.length;
 
     for (var i = scrollSpysLength; i--;) {
       var $spy = $__default['default'](scrollSpys[i]);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
@@ -8612,19 +6560,11 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$8] = ScrollSpy._jQueryInterface;
-  $.fn[NAME$8].Constructor = ScrollSpy;
-
-  $.fn[NAME$8].noConflict = function () {
-    $.fn[NAME$8] = JQUERY_NO_CONFLICT$8;
-=======
   $__default['default'].fn[NAME$8] = ScrollSpy._jQueryInterface;
   $__default['default'].fn[NAME$8].Constructor = ScrollSpy;
 
   $__default['default'].fn[NAME$8].noConflict = function () {
     $__default['default'].fn[NAME$8] = JQUERY_NO_CONFLICT$8;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return ScrollSpy._jQueryInterface;
   };
 
@@ -8635,46 +6575,6 @@
    */
 
   var NAME$9 = 'tab';
-<<<<<<< HEAD
-  var VERSION$9 = '4.3.1';
-  var DATA_KEY$9 = 'bs.tab';
-  var EVENT_KEY$9 = "." + DATA_KEY$9;
-  var DATA_API_KEY$7 = '.data-api';
-  var JQUERY_NO_CONFLICT$9 = $.fn[NAME$9];
-  var Event$9 = {
-    HIDE: "hide" + EVENT_KEY$9,
-    HIDDEN: "hidden" + EVENT_KEY$9,
-    SHOW: "show" + EVENT_KEY$9,
-    SHOWN: "shown" + EVENT_KEY$9,
-    CLICK_DATA_API: "click" + EVENT_KEY$9 + DATA_API_KEY$7
-  };
-  var ClassName$9 = {
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active',
-    DISABLED: 'disabled',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$9 = {
-    DROPDOWN: '.dropdown',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    ACTIVE: '.active',
-    ACTIVE_UL: '> li > .active',
-    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-    DROPDOWN_TOGGLE: '.dropdown-toggle',
-    DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Tab =
-  /*#__PURE__*/
-  function () {
-=======
   var VERSION$9 = '4.5.3';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
@@ -8704,7 +6604,6 @@
    */
 
   var Tab = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function Tab(element) {
       this._element = element;
     } // Getters
@@ -8716,31 +6615,12 @@
     _proto.show = function show() {
       var _this = this;
 
-<<<<<<< HEAD
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName$9.ACTIVE) || $(this._element).hasClass(ClassName$9.DISABLED)) {
-=======
       if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default['default'](this._element).hasClass(CLASS_NAME_ACTIVE$3) || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED$1)) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         return;
       }
 
       var target;
       var previous;
-<<<<<<< HEAD
-      var listElement = $(this._element).closest(Selector$9.NAV_LIST_GROUP)[0];
-      var selector = Util.getSelectorFromElement(this._element);
-
-      if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector$9.ACTIVE_UL : Selector$9.ACTIVE;
-        previous = $.makeArray($(listElement).find(itemSelector));
-        previous = previous[previous.length - 1];
-      }
-
-      var hideEvent = $.Event(Event$9.HIDE, {
-        relatedTarget: this._element
-      });
-      var showEvent = $.Event(Event$9.SHOW, {
-=======
       var listElement = $__default['default'](this._element).closest(SELECTOR_NAV_LIST_GROUP$1)[0];
       var selector = Util.getSelectorFromElement(this._element);
 
@@ -8754,22 +6634,14 @@
         relatedTarget: this._element
       });
       var showEvent = $__default['default'].Event(EVENT_SHOW$3, {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         relatedTarget: previous
       });
 
       if (previous) {
-<<<<<<< HEAD
-        $(previous).trigger(hideEvent);
-      }
-
-      $(this._element).trigger(showEvent);
-=======
         $__default['default'](previous).trigger(hideEvent);
       }
 
       $__default['default'](this._element).trigger(showEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
         return;
@@ -8782,16 +6654,6 @@
       this._activate(this._element, listElement);
 
       var complete = function complete() {
-<<<<<<< HEAD
-        var hiddenEvent = $.Event(Event$9.HIDDEN, {
-          relatedTarget: _this._element
-        });
-        var shownEvent = $.Event(Event$9.SHOWN, {
-          relatedTarget: previous
-        });
-        $(previous).trigger(hiddenEvent);
-        $(_this._element).trigger(shownEvent);
-=======
         var hiddenEvent = $__default['default'].Event(EVENT_HIDDEN$3, {
           relatedTarget: _this._element
         });
@@ -8800,7 +6662,6 @@
         });
         $__default['default'](previous).trigger(hiddenEvent);
         $__default['default'](_this._element).trigger(shownEvent);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       };
 
       if (target) {
@@ -8811,11 +6672,7 @@
     };
 
     _proto.dispose = function dispose() {
-<<<<<<< HEAD
-      $.removeData(this._element, DATA_KEY$9);
-=======
       $__default['default'].removeData(this._element, DATA_KEY$9);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element = null;
     } // Private
     ;
@@ -8823,15 +6680,9 @@
     _proto._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-<<<<<<< HEAD
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(Selector$9.ACTIVE_UL) : $(container).children(Selector$9.ACTIVE);
-      var active = activeElements[0];
-      var isTransitioning = callback && active && $(active).hasClass(ClassName$9.FADE);
-=======
       var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $__default['default'](container).find(SELECTOR_ACTIVE_UL) : $__default['default'](container).children(SELECTOR_ACTIVE$2);
       var active = activeElements[0];
       var isTransitioning = callback && active && $__default['default'](active).hasClass(CLASS_NAME_FADE$4);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, callback);
@@ -8839,11 +6690,7 @@
 
       if (active && isTransitioning) {
         var transitionDuration = Util.getTransitionDurationFromElement(active);
-<<<<<<< HEAD
-        $(active).removeClass(ClassName$9.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-=======
         $__default['default'](active).removeClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       } else {
         complete();
       }
@@ -8851,19 +6698,11 @@
 
     _proto._transitionComplete = function _transitionComplete(element, active, callback) {
       if (active) {
-<<<<<<< HEAD
-        $(active).removeClass(ClassName$9.ACTIVE);
-        var dropdownChild = $(active.parentNode).find(Selector$9.DROPDOWN_ACTIVE_CHILD)[0];
-
-        if (dropdownChild) {
-          $(dropdownChild).removeClass(ClassName$9.ACTIVE);
-=======
         $__default['default'](active).removeClass(CLASS_NAME_ACTIVE$3);
         var dropdownChild = $__default['default'](active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
           $__default['default'](dropdownChild).removeClass(CLASS_NAME_ACTIVE$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         if (active.getAttribute('role') === 'tab') {
@@ -8871,11 +6710,7 @@
         }
       }
 
-<<<<<<< HEAD
-      $(element).addClass(ClassName$9.ACTIVE);
-=======
       $__default['default'](element).addClass(CLASS_NAME_ACTIVE$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
       if (element.getAttribute('role') === 'tab') {
         element.setAttribute('aria-selected', true);
@@ -8883,18 +6718,6 @@
 
       Util.reflow(element);
 
-<<<<<<< HEAD
-      if (element.classList.contains(ClassName$9.FADE)) {
-        element.classList.add(ClassName$9.SHOW);
-      }
-
-      if (element.parentNode && $(element.parentNode).hasClass(ClassName$9.DROPDOWN_MENU)) {
-        var dropdownElement = $(element).closest(Selector$9.DROPDOWN)[0];
-
-        if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector$9.DROPDOWN_TOGGLE));
-          $(dropdownToggleList).addClass(ClassName$9.ACTIVE);
-=======
       if (element.classList.contains(CLASS_NAME_FADE$4)) {
         element.classList.add(CLASS_NAME_SHOW$6);
       }
@@ -8905,7 +6728,6 @@
         if (dropdownElement) {
           var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE$1));
           $__default['default'](dropdownToggleList).addClass(CLASS_NAME_ACTIVE$3);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         }
 
         element.setAttribute('aria-expanded', true);
@@ -8919,11 +6741,7 @@
 
     Tab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var $this = $(this);
-=======
         var $this = $__default['default'](this);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         var data = $this.data(DATA_KEY$9);
 
         if (!data) {
@@ -8957,17 +6775,10 @@
    */
 
 
-<<<<<<< HEAD
-  $(document).on(Event$9.CLICK_DATA_API, Selector$9.DATA_TOGGLE, function (event) {
-    event.preventDefault();
-
-    Tab._jQueryInterface.call($(this), 'show');
-=======
   $__default['default'](document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$4, function (event) {
     event.preventDefault();
 
     Tab._jQueryInterface.call($__default['default'](this), 'show');
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   });
   /**
    * ------------------------------------------------------------------------
@@ -8975,19 +6786,11 @@
    * ------------------------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  $.fn[NAME$9] = Tab._jQueryInterface;
-  $.fn[NAME$9].Constructor = Tab;
-
-  $.fn[NAME$9].noConflict = function () {
-    $.fn[NAME$9] = JQUERY_NO_CONFLICT$9;
-=======
   $__default['default'].fn[NAME$9] = Tab._jQueryInterface;
   $__default['default'].fn[NAME$9].Constructor = Tab;
 
   $__default['default'].fn[NAME$9].noConflict = function () {
     $__default['default'].fn[NAME$9] = JQUERY_NO_CONFLICT$9;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return Tab._jQueryInterface;
   };
 
@@ -8998,25 +6801,6 @@
    */
 
   var NAME$a = 'toast';
-<<<<<<< HEAD
-  var VERSION$a = '4.3.1';
-  var DATA_KEY$a = 'bs.toast';
-  var EVENT_KEY$a = "." + DATA_KEY$a;
-  var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
-  var Event$a = {
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY$a,
-    HIDE: "hide" + EVENT_KEY$a,
-    HIDDEN: "hidden" + EVENT_KEY$a,
-    SHOW: "show" + EVENT_KEY$a,
-    SHOWN: "shown" + EVENT_KEY$a
-  };
-  var ClassName$a = {
-    FADE: 'fade',
-    HIDE: 'hide',
-    SHOW: 'show',
-    SHOWING: 'showing'
-  };
-=======
   var VERSION$a = '4.5.3';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
@@ -9030,7 +6814,6 @@
   var CLASS_NAME_HIDE = 'hide';
   var CLASS_NAME_SHOW$7 = 'show';
   var CLASS_NAME_SHOWING = 'showing';
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   var DefaultType$7 = {
     animation: 'boolean',
     autohide: 'boolean',
@@ -9041,21 +6824,6 @@
     autohide: true,
     delay: 500
   };
-<<<<<<< HEAD
-  var Selector$a = {
-    DATA_DISMISS: '[data-dismiss="toast"]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-  };
-
-  var Toast =
-  /*#__PURE__*/
-  function () {
-=======
   var SELECTOR_DATA_DISMISS$1 = '[data-dismiss="toast"]';
   /**
    * ------------------------------------------------------------------------
@@ -9064,7 +6832,6 @@
    */
 
   var Toast = /*#__PURE__*/function () {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     function Toast(element, config) {
       this._element = element;
       this._config = this._getConfig(config);
@@ -9080,33 +6847,6 @@
     _proto.show = function show() {
       var _this = this;
 
-<<<<<<< HEAD
-      $(this._element).trigger(Event$a.SHOW);
-
-      if (this._config.animation) {
-        this._element.classList.add(ClassName$a.FADE);
-      }
-
-      var complete = function complete() {
-        _this._element.classList.remove(ClassName$a.SHOWING);
-
-        _this._element.classList.add(ClassName$a.SHOW);
-
-        $(_this._element).trigger(Event$a.SHOWN);
-
-        if (_this._config.autohide) {
-          _this.hide();
-        }
-      };
-
-      this._element.classList.remove(ClassName$a.HIDE);
-
-      this._element.classList.add(ClassName$a.SHOWING);
-
-      if (this._config.animation) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-=======
       var showEvent = $__default['default'].Event(EVENT_SHOW$4);
       $__default['default'](this._element).trigger(showEvent);
 
@@ -9143,42 +6883,11 @@
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
         $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       } else {
         complete();
       }
     };
 
-<<<<<<< HEAD
-    _proto.hide = function hide(withoutTimeout) {
-      var _this2 = this;
-
-      if (!this._element.classList.contains(ClassName$a.SHOW)) {
-        return;
-      }
-
-      $(this._element).trigger(Event$a.HIDE);
-
-      if (withoutTimeout) {
-        this._close();
-      } else {
-        this._timeout = setTimeout(function () {
-          _this2._close();
-        }, this._config.delay);
-      }
-    };
-
-    _proto.dispose = function dispose() {
-      clearTimeout(this._timeout);
-      this._timeout = null;
-
-      if (this._element.classList.contains(ClassName$a.SHOW)) {
-        this._element.classList.remove(ClassName$a.SHOW);
-      }
-
-      $(this._element).off(Event$a.CLICK_DISMISS);
-      $.removeData(this._element, DATA_KEY$a);
-=======
     _proto.hide = function hide() {
       if (!this._element.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
@@ -9203,56 +6912,26 @@
 
       $__default['default'](this._element).off(EVENT_CLICK_DISMISS$1);
       $__default['default'].removeData(this._element, DATA_KEY$a);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       this._element = null;
       this._config = null;
     } // Private
     ;
 
     _proto._getConfig = function _getConfig(config) {
-<<<<<<< HEAD
-      config = _objectSpread({}, Default$7, $(this._element).data(), typeof config === 'object' && config ? config : {});
-=======
       config = _extends({}, Default$7, $__default['default'](this._element).data(), typeof config === 'object' && config ? config : {});
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
 
     _proto._setListeners = function _setListeners() {
-<<<<<<< HEAD
-      var _this3 = this;
-
-      $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
-        return _this3.hide(true);
-=======
       var _this2 = this;
 
       $__default['default'](this._element).on(EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function () {
         return _this2.hide();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       });
     };
 
     _proto._close = function _close() {
-<<<<<<< HEAD
-      var _this4 = this;
-
-      var complete = function complete() {
-        _this4._element.classList.add(ClassName$a.HIDE);
-
-        $(_this4._element).trigger(Event$a.HIDDEN);
-      };
-
-      this._element.classList.remove(ClassName$a.SHOW);
-
-      if (this._config.animation) {
-        var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-      } else {
-        complete();
-      }
-=======
       var _this3 = this;
 
       var complete = function complete() {
@@ -9274,17 +6953,12 @@
     _proto._clearTimeout = function _clearTimeout() {
       clearTimeout(this._timeout);
       this._timeout = null;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     } // Static
     ;
 
     Toast._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-<<<<<<< HEAD
-        var $element = $(this);
-=======
         var $element = $__default['default'](this);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
         var data = $element.data(DATA_KEY$a);
 
         var _config = typeof config === 'object' && config;
@@ -9330,41 +7004,6 @@
    */
 
 
-<<<<<<< HEAD
-  $.fn[NAME$a] = Toast._jQueryInterface;
-  $.fn[NAME$a].Constructor = Toast;
-
-  $.fn[NAME$a].noConflict = function () {
-    $.fn[NAME$a] = JQUERY_NO_CONFLICT$a;
-    return Toast._jQueryInterface;
-  };
-
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  (function () {
-    if (typeof $ === 'undefined') {
-      throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
-    }
-
-    var version = $.fn.jquery.split(' ')[0].split('.');
-    var minMajor = 1;
-    var ltMajor = 2;
-    var minMinor = 9;
-    var minPatch = 1;
-    var maxMajor = 4;
-
-    if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-      throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
-    }
-  })();
-
-  exports.Util = Util;
-=======
   $__default['default'].fn[NAME$a] = Toast._jQueryInterface;
   $__default['default'].fn[NAME$a].Constructor = Toast;
 
@@ -9373,7 +7012,6 @@
     return Toast._jQueryInterface;
   };
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   exports.Alert = Alert;
   exports.Button = Button;
   exports.Carousel = Carousel;
@@ -9385,16 +7023,9 @@
   exports.Tab = Tab;
   exports.Toast = Toast;
   exports.Tooltip = Tooltip;
-<<<<<<< HEAD
-
-  Object.defineProperty(exports, '__esModule', { value: true });
-
-}));
-=======
   exports.Util = Util;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 //# sourceMappingURL=bootstrap.bundle.js.map

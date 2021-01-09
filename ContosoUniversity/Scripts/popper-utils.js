@@ -1,10 +1,6 @@
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
-<<<<<<< HEAD
- * @version 1.14.3
-=======
  * @version 1.16.1
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -38,12 +34,8 @@ function getStyleComputedProperty(element, property) {
     return [];
   }
   // NOTE: 1 DOM access here
-<<<<<<< HEAD
-  const css = getComputedStyle(element, null);
-=======
   const window = element.ownerDocument.defaultView;
   const css = window.getComputedStyle(element, null);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   return property ? css[property] : css;
 }
 
@@ -91,9 +83,6 @@ function getScrollParent(element) {
   return getScrollParent(getParentNode(element));
 }
 
-<<<<<<< HEAD
-var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
-=======
 /**
  * Returns the reference node of the reference object, or the reference object itself.
  * @method
@@ -106,7 +95,6 @@ function getReferenceNode(reference) {
 }
 
 var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined' && typeof navigator !== 'undefined';
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
 const isIE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
 const isIE10 = isBrowser && /MSIE 10/.test(navigator.userAgent);
@@ -143,11 +131,7 @@ function getOffsetParent(element) {
   const noOffsetParent = isIE(10) ? document.body : null;
 
   // NOTE: 1 DOM access here
-<<<<<<< HEAD
-  let offsetParent = element.offsetParent;
-=======
   let offsetParent = element.offsetParent || null;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   // Skip hidden elements which don't have an offsetParent
   while (offsetParent === noOffsetParent && element.nextElementSibling) {
     offsetParent = (element = element.nextElementSibling).offsetParent;
@@ -159,15 +143,9 @@ function getOffsetParent(element) {
     return element ? element.ownerDocument.documentElement : document.documentElement;
   }
 
-<<<<<<< HEAD
-  // .offsetParent will return the closest TD or TABLE in case
-  // no offsetParent is present, I hate this job...
-  if (['TD', 'TABLE'].indexOf(offsetParent.nodeName) !== -1 && getStyleComputedProperty(offsetParent, 'position') === 'static') {
-=======
   // .offsetParent will return the closest TH, TD or TABLE in case
   // no offsetParent is present, I hate this job...
   if (['TH', 'TD', 'TABLE'].indexOf(offsetParent.nodeName) !== -1 && getStyleComputedProperty(offsetParent, 'position') === 'static') {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     return getOffsetParent(offsetParent);
   }
 
@@ -295,16 +273,6 @@ function getBordersSize(styles, axis) {
   const sideA = axis === 'x' ? 'Left' : 'Top';
   const sideB = sideA === 'Left' ? 'Right' : 'Bottom';
 
-<<<<<<< HEAD
-  return parseFloat(styles[`border${sideA}Width`], 10) + parseFloat(styles[`border${sideB}Width`], 10);
-}
-
-function getSize(axis, body, html, computedStyle) {
-  return Math.max(body[`offset${axis}`], body[`scroll${axis}`], html[`client${axis}`], html[`offset${axis}`], html[`scroll${axis}`], isIE(10) ? html[`offset${axis}`] + computedStyle[`margin${axis === 'Height' ? 'Top' : 'Left'}`] + computedStyle[`margin${axis === 'Height' ? 'Bottom' : 'Right'}`] : 0);
-}
-
-function getWindowSizes() {
-=======
   return parseFloat(styles[`border${sideA}Width`]) + parseFloat(styles[`border${sideB}Width`]);
 }
 
@@ -313,7 +281,6 @@ function getSize(axis, body, html, computedStyle) {
 }
 
 function getWindowSizes(document) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   const body = document.body;
   const html = document.documentElement;
   const computedStyle = isIE(10) && getComputedStyle(html);
@@ -387,15 +354,9 @@ function getBoundingClientRect(element) {
   };
 
   // subtract scrollbar size from sizes
-<<<<<<< HEAD
-  const sizes = element.nodeName === 'HTML' ? getWindowSizes() : {};
-  const width = sizes.width || element.clientWidth || result.right - result.left;
-  const height = sizes.height || element.clientHeight || result.bottom - result.top;
-=======
   const sizes = element.nodeName === 'HTML' ? getWindowSizes(element.ownerDocument) : {};
   const width = sizes.width || element.clientWidth || result.width;
   const height = sizes.height || element.clientHeight || result.height;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   let horizScrollbar = element.offsetWidth - width;
   let vertScrollbar = element.offsetHeight - height;
@@ -422,19 +383,11 @@ function getOffsetRectRelativeToArbitraryNode(children, parent, fixedPosition = 
   const scrollParent = getScrollParent(children);
 
   const styles = getStyleComputedProperty(parent);
-<<<<<<< HEAD
-  const borderTopWidth = parseFloat(styles.borderTopWidth, 10);
-  const borderLeftWidth = parseFloat(styles.borderLeftWidth, 10);
-
-  // In cases where the parent is fixed, we must ignore negative scroll in offset calc
-  if (fixedPosition && parent.nodeName === 'HTML') {
-=======
   const borderTopWidth = parseFloat(styles.borderTopWidth);
   const borderLeftWidth = parseFloat(styles.borderLeftWidth);
 
   // In cases where the parent is fixed, we must ignore negative scroll in offset calc
   if (fixedPosition && isHTML) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     parentRect.top = Math.max(parentRect.top, 0);
     parentRect.left = Math.max(parentRect.left, 0);
   }
@@ -452,13 +405,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent, fixedPosition = 
   // differently when margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
   if (!isIE10 && isHTML) {
-<<<<<<< HEAD
-    const marginTop = parseFloat(styles.marginTop, 10);
-    const marginLeft = parseFloat(styles.marginLeft, 10);
-=======
     const marginTop = parseFloat(styles.marginTop);
     const marginLeft = parseFloat(styles.marginLeft);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     offsets.top -= borderTopWidth - marginTop;
     offsets.bottom -= borderTopWidth - marginTop;
@@ -512,15 +460,11 @@ function isFixed(element) {
   if (getStyleComputedProperty(element, 'position') === 'fixed') {
     return true;
   }
-<<<<<<< HEAD
-  return isFixed(getParentNode(element));
-=======
   const parentNode = getParentNode(element);
   if (!parentNode) {
     return false;
   }
   return isFixed(parentNode);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 }
 
 /**
@@ -558,11 +502,7 @@ function getBoundaries(popper, reference, padding, boundariesElement, fixedPosit
   // NOTE: 1 DOM access here
 
   let boundaries = { top: 0, left: 0 };
-<<<<<<< HEAD
-  const offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
-=======
   const offsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, getReferenceNode(reference));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   // Handle viewport case
   if (boundariesElement === 'viewport') {
@@ -585,11 +525,7 @@ function getBoundaries(popper, reference, padding, boundariesElement, fixedPosit
 
     // In case of HTML, we need a different computation
     if (boundariesNode.nodeName === 'HTML' && !isFixed(offsetParent)) {
-<<<<<<< HEAD
-      const { height, width } = getWindowSizes();
-=======
       const { height, width } = getWindowSizes(popper.ownerDocument);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       boundaries.top += offsets.top - offsets.marginTop;
       boundaries.bottom = height + offsets.top;
       boundaries.left += offsets.left - offsets.marginLeft;
@@ -601,19 +537,12 @@ function getBoundaries(popper, reference, padding, boundariesElement, fixedPosit
   }
 
   // Add paddings
-<<<<<<< HEAD
-  boundaries.left += padding;
-  boundaries.top += padding;
-  boundaries.right -= padding;
-  boundaries.bottom -= padding;
-=======
   padding = padding || 0;
   const isPaddingNumber = typeof padding === 'number';
   boundaries.left += isPaddingNumber ? padding : padding.left || 0;
   boundaries.top += isPaddingNumber ? padding : padding.top || 0;
   boundaries.right -= isPaddingNumber ? padding : padding.right || 0;
   boundaries.bottom -= isPaddingNumber ? padding : padding.bottom || 0;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   return boundaries;
 }
@@ -672,16 +601,6 @@ function computeAutoPlacement(placement, refRect, popper, reference, boundariesE
   return computedPlacement + (variation ? `-${variation}` : '');
 }
 
-<<<<<<< HEAD
-const longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
-let timeoutDuration = 0;
-for (let i = 0; i < longerTimeoutBrowsers.length; i += 1) {
-  if (isBrowser && navigator.userAgent.indexOf(longerTimeoutBrowsers[i]) >= 0) {
-    timeoutDuration = 1;
-    break;
-  }
-}
-=======
 const timeoutDuration = function () {
   const longerTimeoutBrowsers = ['Edge', 'Trident', 'Firefox'];
   for (let i = 0; i < longerTimeoutBrowsers.length; i += 1) {
@@ -691,7 +610,6 @@ const timeoutDuration = function () {
   }
   return 0;
 }();
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
 function microtaskDebounce(fn) {
   let called = false;
@@ -782,11 +700,7 @@ function findIndex(arr, prop, value) {
 function getOffsetRect(element) {
   let elementRect;
   if (element.nodeName === 'HTML') {
-<<<<<<< HEAD
-    const { width, height } = getWindowSizes();
-=======
     const { width, height } = getWindowSizes(element.ownerDocument);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     elementRect = {
       width,
       height,
@@ -814,16 +728,10 @@ function getOffsetRect(element) {
  * @returns {Object} object containing width and height properties
  */
 function getOuterSizes(element) {
-<<<<<<< HEAD
-  const styles = getComputedStyle(element);
-  const x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-  const y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
-=======
   const window = element.ownerDocument.defaultView;
   const styles = window.getComputedStyle(element);
   const x = parseFloat(styles.marginTop || 0) + parseFloat(styles.marginBottom || 0);
   const y = parseFloat(styles.marginLeft || 0) + parseFloat(styles.marginRight || 0);
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   const result = {
     width: element.offsetWidth + y,
     height: element.offsetHeight + x
@@ -893,11 +801,7 @@ function getPopperOffsets(popper, referenceOffsets, placement) {
  * @returns {Object} An object containing the offsets which will be applied to the popper
  */
 function getReferenceOffsets(state, popper, reference, fixedPosition = null) {
-<<<<<<< HEAD
-  const commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
-=======
   const commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, getReferenceNode(reference));
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   return getOffsetRectRelativeToArbitraryNode(reference, commonOffsetParent, fixedPosition);
 }
 

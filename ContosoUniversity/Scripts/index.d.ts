@@ -35,8 +35,6 @@ declare namespace Popper {
 
   export type ModifierFn = (data: Data, options: Object) => Data;
 
-<<<<<<< HEAD
-=======
   export interface Attributes {
     'x-out-of-boundaries': '' | false;
     'x-placement': Placement;
@@ -49,7 +47,6 @@ declare namespace Popper {
     right?: number,
   }
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   export interface BaseModifier {
     order?: number;
     enabled?: boolean;
@@ -63,11 +60,7 @@ declare namespace Popper {
     };
     preventOverflow?: BaseModifier & {
       priority?: Position[],
-<<<<<<< HEAD
-      padding?: number,
-=======
       padding?: number | Padding,
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
       boundariesElement?: Boundary | Element,
       escapeWithReference?: boolean
     };
@@ -77,15 +70,10 @@ declare namespace Popper {
     };
     flip?: BaseModifier & {
       behavior?: Behavior | Position[],
-<<<<<<< HEAD
-      padding?: number,
-      boundariesElement?: Boundary | Element,
-=======
       padding?: number | Padding,
       boundariesElement?: Boundary | Element,
       flipVariations?: boolean,
       flipVariationsByContent?: boolean,
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     };
     inner?: BaseModifier;
     hide?: BaseModifier;
@@ -117,11 +105,8 @@ declare namespace Popper {
     hide: boolean;
     arrowElement: Element;
     styles: CSSStyleDeclaration;
-<<<<<<< HEAD
-=======
     arrowStyles: CSSStyleDeclaration;
     attributes: Attributes;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
     boundaries: Object;
     offsets: {
       popper: Offset,
@@ -148,10 +133,7 @@ declare namespace Popper {
   export interface ReferenceObject {
     clientHeight: number;
     clientWidth: number;
-<<<<<<< HEAD
-=======
     referenceNode?: Node;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
     getBoundingClientRect(): ClientRect;
   }
@@ -159,10 +141,7 @@ declare namespace Popper {
 
 // Re-export types in the Popper namespace so that they can be accessed as top-level named exports.
 // These re-exports should be removed in 2.x when the "declare namespace Popper" syntax is removed.
-<<<<<<< HEAD
-=======
 export type Padding = Popper.Padding;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 export type Position = Popper.Position;
 export type Placement = Popper.Placement;
 export type Boundary = Popper.Boundary;
@@ -181,11 +160,8 @@ declare class Popper {
   static Defaults: PopperOptions;
 
   options: PopperOptions;
-<<<<<<< HEAD
-=======
   popper: Element;
   reference: Element | ReferenceObject;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 
   constructor(reference: Element | ReferenceObject, popper: Element, options?: PopperOptions);
 

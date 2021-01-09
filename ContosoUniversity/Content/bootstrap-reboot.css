@@ -1,15 +1,8 @@
 /*!
-<<<<<<< HEAD
- * Bootstrap Reboot v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-=======
  * Bootstrap Reboot v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 *,
@@ -40,11 +33,7 @@ body {
   background-color: #fff;
 }
 
-<<<<<<< HEAD
-[tabindex="-1"]:focus {
-=======
 [tabindex="-1"]:focus:not(:focus-visible) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   outline: 0 !important;
 }
 
@@ -144,31 +133,16 @@ a:hover {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
-a:not([href]):not([tabindex]) {
-=======
 a:not([href]):not([class]) {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   color: inherit;
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
-=======
 a:not([href]):not([class]):hover {
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
   color: inherit;
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-a:not([href]):not([tabindex]):focus {
-  outline: 0;
-}
-
-=======
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 pre,
 code,
 kbd,
@@ -181,10 +155,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-<<<<<<< HEAD
-=======
   -ms-overflow-style: scrollbar;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 }
 
 figure {
@@ -215,10 +186,7 @@ caption {
 
 th {
   text-align: inherit;
-<<<<<<< HEAD
-=======
   text-align: -webkit-match-parent;
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 }
 
 label {
@@ -256,13 +224,10 @@ select {
   text-transform: none;
 }
 
-<<<<<<< HEAD
-=======
 [role="button"] {
   cursor: pointer;
 }
 
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 select {
   word-wrap: normal;
 }
@@ -295,16 +260,6 @@ input[type="checkbox"] {
   padding: 0;
 }
 
-<<<<<<< HEAD
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  -webkit-appearance: listbox;
-}
-
-=======
->>>>>>> 7fdd662dd472b213041210db98c55c25a89e1410
 textarea {
   overflow: auto;
   resize: vertical;
